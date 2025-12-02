@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit7 英単語テスト</title>
+    <!-- 共通スタイルの読み込み (階層に注意: ../css/) -->
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<!-- 科目に合わせてクラスを変更 -->
+
+<body class="subject-english">
+
+    <header class="app-header">
+        <button class="nav-btn active" id="btn-study" onclick="switchTab('study')">📖 解説・暗記</button>
+        <button class="nav-btn" id="btn-test" onclick="switchTab('test')">📝 実践テスト</button>
+    </header>
+
+    <div class="container">
+
+        <!-- 解説タブ -->
+        <main id="content-study" class="tab-content active">
+
+            <!-- 重要語句リスト -->
+            <div class="card">
+                <h2>Word List</h2>
+                <div class="text-box">
+                    <p>この単元で覚えるべき重要語句一覧です。<span class="keyword">太字</span>は特に重要です。</p>
+                    <!-- 色指定を避けるためシンプルなリスト構造を使用 -->
+                    <ul>
+                        <li><span class="keyword">alumna</span> : 女子卒業生</li>
+                        <li><span class="keyword">hidden</span> : 隠れた</li>
+                        <li><span class="keyword">pioneer</span> : 先駆者</li>
+                        <li><span class="keyword">commemorate</span> : を記念する</li>
+                        <li><span class="keyword">reform</span> : 改革 / 改善</li>
+                        <li><span class="keyword">supporter</span> : 支持者</li>
+                        <li><span class="keyword">found</span> : を設立する</li>
+                        <li><span class="keyword">strengthen</span> : を強化する</li>
+                        <li><span class="keyword">connection</span> : つながり / 関係</li>
+                        <li><span class="keyword">institute</span> : 研究機関 / 学会</li>
+                        <li><span class="keyword">redesign</span> : を再設計する</li>
+                        <li><span class="keyword">industrialist</span> : 実業家</li>
+                        <li><span class="keyword">historical</span> : 歴史上の</li>
+                        <li><span class="keyword">era</span> : 時代</li>
+                        <li><span class="keyword">modernization</span> : 近代化</li>
+                        <li><span class="keyword">educate</span> : を教育する</li>
+                        <li><span class="keyword">non-existent</span> : 存在しない</li>
+                        <li><span class="keyword">modernize</span> : を近代化する</li>
+                        <li><span class="keyword">Washington, D.C.</span> : ワシントンD.C.</li>
+                        <li><span class="keyword">dissatisfaction</span> : 不満</li>
+                        <li><span class="keyword">mid-twenties</span> : 20代半ば</li>
+                        <li><span class="keyword">biology</span> : 生物学</li>
+                        <li><span class="keyword">prestigious</span> : 一流の / 権威ある</li>
+                        <li><span class="keyword">legacy</span> : 遺産 / 遺風</li>
+                        <li><span class="keyword">bond</span> : きずな</li>
+                        <li><span class="keyword">alongside</span> : と並んで / と同時に</li>
+                        <li><span class="keyword">recognition</span> : 認め / 承認</li>
+                        <li><span class="keyword">bring about</span> : をもたらす / 引き起こす</li>
+                        <li><span class="keyword">run for...</span> : (一定期間)継続する</li>
+                        <li><span class="keyword">leave behind...</span> : を残す</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 本文解説 -->
+            <div class="card">
+                <h2>本文と和訳</h2>
+
+                <div class="text-box">
+                    <h3 class="text-sub" style="margin-top:0;">Paragraph 1-3</h3>
+                    <p>
+                        A Bryn Mawr <span class="keyword">alumna</span> who went on to become a <span
+                            class="keyword">pioneer</span> for women’s higher education in her native Japan is to be
+                        <span class="keyword">commemorated</span> with an appearance on a new banknote.
+                    </p>
+                    <p class="text-sub">
+                        【訳】母国日本で女性の高等教育のパイオニアとなったブリンマー大学の卒業生が、新紙幣の肖像として記念されることになった。
+                    </p>
+                    <hr>
+
+                    <p>
+                        Umeko Tsuda, who studied at the famous women’s college in Pennsylvania from 1889 to 1892, is
+                        being remembered for her leading role in helping to <span class="keyword">bring about</span>
+                        social <span class="keyword">reform</span> in Japan. Tsuda and her <span
+                            class="keyword">supporters</span> <span class="keyword">founded</span> a scholarship to help
+                        <span class="keyword">strengthen</span> <span class="keyword">connections</span> between the US
+                        and Japan in women’s higher education. She also established a leading <span
+                            class="keyword">institute</span> for women’s education in her home city of Tokyo.
+                    </p>
+                    <p class="text-sub">
+                        【訳】1889年から1892年までペンシルバニア州の有名な女子大学で学んだ津田梅子は、日本における社会改革の実現に主導的な役割を果たした人物として記憶されている。津田と支持者たちは、女性の高等教育における日米間の結びつきを強化するための奨学金を設立した。彼女はまた、故郷である東京に女性教育のための主要な機関を設立した。
+                    </p>
+                    <hr>
+
+                    <p>
+                        In the first <span class="keyword">redesign</span> of Japanese banknotes in two decades, Tsuda’s
+                        image is set to appear on a new 5,000 yen banknote. <span class="keyword">Industrialist</span>
+                        Eiichi Shibusawa, and scientist Shibasaburo Kitasato are the other two <span
+                            class="keyword">historical</span> figures to be <span class="keyword">commemorated</span> on
+                        the new bills which are being released in Japan’s new Reiwa <span class="keyword">era</span>.
+                    </p>
+                    <p class="text-sub">
+                        【訳】20年ぶりとなる日本の紙幣刷新において、津田の肖像画は新5000円札に採用されることになった。実業家の渋沢栄一と科学者の北里柴三郎も、日本の新しい「令和」の時代に発行される新紙幣で記念される他の2人の歴史的人物である。
+                    </p>
+                </div>
+
+                <div class="text-box">
+                    <h3 class="text-sub">Paragraph 4-6</h3>
+                    <p>
+                        Tsuda’s story is a fascinating tale that saw social <span class="keyword">reforms</span> in the
+                        US play an important role in the <span class="keyword">modernization</span> of Japan. Nowadays
+                        in Japan, almost half of all undergraduates are female. However, the world Tsuda was born into
+                        in 1864 was very different.
+                    </p>
+                    <p class="text-sub">
+                        【訳】津田の物語は、米国の社会改革が日本の近代化に重要な役割を果たしたという魅力的な話である。現在の日本では、学部生のほぼ半数が女性である。しかし、津田が生まれた1864年の世界は全く異なっていた。
+                    </p>
+                    <hr>
+
+                    <p>
+                        When she was just six years old, Tsuda—a daughter of a public official—was sent by the Japanese
+                        government to be <span class="keyword">educated</span> in the US. At the same time in Japan a
+                        school system based on the US and European model was being established, but the majority of
+                        girls did not attend even elementary school. In addition, secondary education for girls was
+                        almost <span class="keyword">non-existent</span>.
+                    </p>
+                    <p class="text-sub">
+                        【訳】わずか6歳の時、官僚の娘であった津田は、米国で教育を受けるために日本政府によって派遣された。当時、日本では欧米モデルに基づいた学校制度が設立されつつあったが、大多数の女子は小学校にさえ通っていなかった。さらに、女子のための中等教育はほぼ存在しなかった。
+                    </p>
+                    <hr>
+
+                    <p>
+                        The Japanese government believed that by sending girls like Tsuda to grow up in the US they
+                        would be able to help their Japanese “sisters” when they returned to Japan and help <span
+                            class="keyword">modernize</span> Japan as a whole. Tsuda lived with an American family in
+                        <span class="keyword">Washington, D.C.</span> until she was 17, at which point she returned to
+                        Japan. The teenage Tsuda was shocked as life in Japan was very different from the American life
+                        she had grown up in. While support for the higher education of women was growing in the US, only
+                        around 30 percent of girls in Japan attended even elementary school by 1890.
+                    </p>
+                    <p class="text-sub">
+                        【訳】日本政府は、津田のような少女たちを米国で育てることによって、帰国時に彼女たちが日本の「姉妹たち」を助け、日本全体の近代化に貢献できるだろうと考えていた。津田は17歳になるまでワシントンD.C.のアメリカ人家庭で暮らし、その時点で日本に帰国した。10代の津田は、日本の生活が自分が育ったアメリカの生活とはあまりに異なっていたため衝撃を受けた。米国では女性の高等教育への支援が高まっていた一方で、1890年までに小学校に通っていた日本の女子はわずか約30パーセントに過ぎなかった。
+                    </p>
+                </div>
+
+                <div class="text-box">
+                    <h3 class="text-sub">Paragraph 7-10</h3>
+                    <p>
+                        Tsuda began to feel that Japanese women should have the opportunity to experience the same
+                        freedoms and the same education that she had received. Her <span
+                            class="keyword">dissatisfaction</span> with life back in Japan led to her return to the US
+                        in her <span class="keyword">mid-twenties</span>. During her time at Bryn Mawr, she majored in
+                        <span class="keyword">biology</span>. She also went on speaking tours around the US to raise
+                        awareness of the lack of higher education for Japanese women. Tsuda used these tours to raise
+                        money to establish a scholarship for Japanese women to study overseas. Her scholarship would
+                        <span class="keyword">run for</span> more than 80 years.
+                    </p>
+                    <p class="text-sub">
+                        【訳】津田は、日本の女性も自分が受けたのと同じ自由と同じ教育を経験する機会を持つべきだと感じ始めた。日本での生活に対する不満が、20代半ばでの米国への再渡航につながった。ブリンマー大学在籍中、彼女は生物学を専攻した。また、日本の女性に対する高等教育の欠如についての認識を高めるために、全米各地で講演旅行を行った。津田はこれらのツアーを利用して、日本人女性が海外留学するための奨学金を設立するための資金を集めた。彼女の奨学金は80年以上続くことになった。
+                    </p>
+                    <hr>
+
+                    <p>
+                        Returning once again to Japan, she began teaching and continued giving speeches. She also
+                        started Tsuda College, which later became today’s Tsuda University in Tokyo—a <span
+                            class="keyword">prestigious</span> higher education <span class="keyword">institute</span>
+                        for women.
+                    </p>
+                    <p class="text-sub">
+                        【訳】再び日本に戻ると、彼女は教育活動を始め、講演も続けた。彼女はまた、後に東京にある現在の津田塾大学となる津田カレッジを創設した。これは女性のための権威ある高等教育機関である。
+                    </p>
+                    <hr>
+
+                    <p>
+                        Though she passed away in 1929, Tsuda <span class="keyword">left behind</span> a <span
+                            class="keyword">legacy</span> of higher education for women and a strong <span
+                            class="keyword">bond</span> between the US and Japan. The decision of the Japanese
+                        government to honor her places Tsuda <span class="keyword">alongside</span> other Bryn Mawr
+                        alumnae with international <span class="keyword">recognition</span>, including the Academy Award
+                        winning actor Katharine Hepburn and the Nobel Peace Prize winner Emily Greene Balch.
+                    </p>
+                    <p class="text-sub">
+                        【訳】1929年に亡くなったが、津田は女性のための高等教育という遺産と、日米間の強い絆を残した。日本政府が彼女を称えるという決定は、アカデミー賞受賞俳優のキャサリン・ヘプバーンやノーベル平和賞受賞者のエミリー・グリーン・バルチなど、国際的に認められた他のブリンマー大学卒業生と並ぶ位置に津田を置くことになる。
+                    </p>
+                    <hr>
+
+                    <p>
+                        The new banknotes featuring Tsuda are scheduled for release in 2024.
+                    </p>
+                    <p class="text-sub">
+                        【訳】津田を描いた新紙幣は2024年に発行される予定である。
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <!-- テストタブ -->
+        <main id="content-test" class="tab-content">
+
+            <!-- Q1 -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Q1. Fill in the blanks. (From Word List)</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+
+                <div class="text-box">
+                    <p class="text-sub">母国日本で女性の高等教育のパイオニアとなったブリンマー大学の卒業生が...</p>
+                    A Bryn Mawr (<span class="cloze">alumna</span>) who went on to become a (<span
+                        class="cloze">pioneer</span>) for women’s higher education in her native Japan...
+                    <hr>
+
+                    <p class="text-sub">日本における社会改革の実現に主導的な役割を果たした人物として記憶されている。</p>
+                    ...helping to bring about social (<span class="cloze">reform</span>) in Japan.
+                    <hr>
+
+                    <p class="text-sub">津田と支持者たちは、女性の高等教育における日米間の結びつきを強化するための奨学金を設立した。</p>
+                    Tsuda and her (<span class="cloze">supporters</span>) (<span class="cloze">founded</span>) a
+                    scholarship to help strengthen (<span class="cloze">connections</span>) between the US and Japan...
+                    <hr>
+
+                    <p class="text-sub">20年ぶりとなる日本の紙幣刷新において...</p>
+                    In the first (<span class="cloze">redesign</span>) of Japanese banknotes in two decades...
+                    <hr>
+
+                    <p class="text-sub">実業家の渋沢栄一と...他の2人の歴史的人物である。</p>
+                    (<span class="cloze">Industrialist</span>) Eiichi Shibusawa... are the other two (<span
+                        class="cloze">historical</span>) figures...
+                    <hr>
+
+                    <p class="text-sub">女子のための中等教育はほぼ存在しなかった。</p>
+                    In addition, secondary education for girls was almost (<span class="cloze">non-existent</span>).
+                    <hr>
+
+                    <p class="text-sub">今日の津田塾大学...女性のための権威ある高等教育機関である。</p>
+                    ...today’s Tsuda University in Tokyo—a (<span class="cloze">prestigious</span>) higher education
+                    (<span class="cloze">institute</span>) for women.
+                </div>
+
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <strong>正解</strong>
+                        <ul class="text-sub" style="padding-left:20px;">
+                            <li>alumna / pioneer</li>
+                            <li>reform</li>
+                            <li>supporters / founded / connections</li>
+                            <li>redesign</li>
+                            <li>Industrialist / historical</li>
+                            <li>non-existent</li>
+                            <li>prestigious / institute</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Q2. Definition Matching.</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+
+                <div class="text-box">
+                    1. a person who is among the first to explore or settle a new country or area<br>
+                    ➔ (<span class="cloze">pioneer</span>)<br><br>
+
+                    2. a former female student of a specific school, college, or university<br>
+                    ➔ (<span class="cloze">alumna</span>)<br><br>
+
+                    3. inspiring respect and admiration; having high status<br>
+                    ➔ (<span class="cloze">prestigious</span>)<br><br>
+
+                    4. a long and distinct period of history with a particular feature or characteristic<br>
+                    ➔ (<span class="cloze">era</span>)<br><br>
+
+                    5. the study of living organisms<br>
+                    ➔ (<span class="cloze">biology</span>)<br><br>
+
+                    6. to recall and show respect for (someone or something)<br>
+                    ➔ (<span class="cloze">commemorate</span>)<br><br>
+
+                    7. something left or handed down by a predecessor<br>
+                    ➔ (<span class="cloze">legacy</span>)
+                </div>
+
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <strong>正解</strong>
+                        <ul class="text-sub" style="padding-left:20px;">
+                            <li>1. pioneer</li>
+                            <li>2. alumna</li>
+                            <li>3. prestigious</li>
+                            <li>4. era</li>
+                            <li>5. biology</li>
+                            <li>6. commemorate</li>
+                            <li>7. legacy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Q3. Fill in the blanks. (NOT on list)</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+
+                <div class="text-box">
+                    <p class="text-sub">日本における社会改革の実現(をもたらすこと)に主導的な役割を果たした。</p>
+                    ...leading role in helping to (<span class="cloze">bring</span>) (<span class="cloze">about</span>)
+                    social reform in Japan.<br><br>
+
+                    <p class="text-sub">彼女の奨学金は80年以上続くことになった。</p>
+                    Her scholarship would (<span class="cloze">run</span>) (<span class="cloze">for</span>) more than 80
+                    years.<br><br>
+
+                    <p class="text-sub">津田は女性のための高等教育という遺産を残した。</p>
+                    Tsuda (<span class="cloze">left</span>) (<span class="cloze">behind</span>) a legacy of higher
+                    education for women...
+                </div>
+
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <strong>正解</strong>
+                        <ul class="text-sub" style="padding-left:20px;">
+                            <li>1. bring about</li>
+                            <li>2. run for</li>
+                            <li>3. left behind</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Q4. Expressions.</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+
+                <div class="text-box">
+                    <p class="text-sub">「いらない」といった相手に「どうしていらないの？」と尋ねるとき。</p>
+                    (<span class="cloze">Why</span>) (<span class="cloze">not</span>)?<br><br>
+
+                    <p class="text-sub">「例えば誰？」と具体的に例示を求めるとき。※与えられた頭文字で始めなさい。</p>
+                    (<span class="cloze">Like</span>) (<span class="cloze">who</span>)?<br><br>
+
+                    <p class="text-sub">あなたなら何を発明する？</p>
+                    (<span class="cloze">would</span>) (<span class="cloze">you</span>) ?<br><br>
+
+                    <p class="text-sub">私のことを少しお話しします。(自己紹介)</p>
+                    Let me tell you (<span class="cloze">.</span>).<br><br>
+
+                    <p class="text-sub">私は...ですが、~でもあります。</p>
+                    I am ..., (<span class="cloze">~</span>).<br><br>
+
+                    <p class="text-sub">私は...できるといいなと思います。</p>
+                    I (<span class="cloze">I</span>) (<span class="cloze">...</span>)<br><br>
+
+                    <p class="text-sub">私は...するのを楽しみにしています。</p>
+                    I am (<span class="cloze">...ing</span>).
+                </div>
+
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <strong>正解</strong>
+                        <ul class="text-sub" style="padding-left:20px;">
+                            <li>Why not?</li>
+                            <li>Like who?</li>
+                            <li>would you ...?</li>
+                            <li>Let me tell you.</li>
+                            <li>I am ..., ~.</li>
+                            <li>I I ...</li>
+                            <li>I am ...ing.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- スティッキー操作バー (更新版) -->
+    <div class="sticky-bar">
+        <!-- リセットボタン -->
+        <button class="control-btn" onclick="resetCloze()">
+            <span>↺</span><br>リセット
+        </button>
+
+        <button class="control-btn" onclick="toggleRedSheet()">
+            <span>🟥</span><br>赤シート
+        </button>
+
+        <!-- ウォッチ -->
+        <div class="control-btn" onclick="toggleTimer()">
+            <span id="timer-display" class="timer-display">00:00</span>
+            <br>ウォッチ
+        </div>
+
+        <button class="control-btn" onclick="toggleDarkMode()">
+            <span>🌙</span><br>ダーク
+        </button>
+
+        <a href="../../index.html" class="control-btn" style="text-decoration:none;">
+            <span>🏠</span><br>ホーム
+        </a>
+    </div>
+
+    <script src="../../js/script.js"></script>
+</body>
+
+</html>

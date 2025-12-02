@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ページタイトル</title>
+    <!-- ★修正箇所: 階層が深くなったので ../../ に変更 -->
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<!-- 科目に合わせてクラスを変更 -->
+
+<body class="subject-english">
+
+    <header class="app-header">
+        <button class="nav-btn active" id="btn-study" onclick="switchTab('study')">📖 解説・暗記</button>
+        <button class="nav-btn" id="btn-test" onclick="switchTab('test')">📝 実践テスト</button>
+    </header>
+
+    <div class="container">
+
+        <!-- 解説タブ -->
+        <main id="content-study" class="tab-content active">
+            <div class="card">
+                <h2>1. 単元の概要</h2>
+                <div class="text-box">
+                    <!-- 画像を使う場合は同じフォルダに置いてパス指定が楽になります -->
+                    <!-- <img src="chart.png" alt="図解" style="max-width:100%;"> -->
+                    解説文。<span class="keyword">重要語句</span>タグを使用。
+                </div>
+            </div>
+        </main>
+
+        <!-- テストタブ -->
+        <main id="content-test" class="tab-content">
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 1</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+
+                <p>問題文...</p>
+                <div class="text-box">
+                    （ <span class="cloze">正解</span> ）
+                </div>
+
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <strong>正解: ...</strong>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <!-- スティッキー操作バー -->
+    <div class="sticky-bar">
+        <button class="control-btn" onclick="resetCloze()"><span>↺</span><br>リセット</button>
+        <button class="control-btn" onclick="toggleRedSheet()"><span>🟥</span><br>赤シート</button>
+        <div class="control-btn" onclick="toggleTimer()">
+            <span id="timer-display" class="timer-display">00:00</span><br>ウォッチ
+        </div>
+        <button class="control-btn" onclick="toggleDarkMode()"><span>🌙</span><br>ダーク</button>
+
+        <!-- ★修正箇所: ホームへのリンクも ../../ に変更 -->
+        <a href="../../index.html" class="control-btn" style="text-decoration:none;">
+            <span>🏠</span><br>ホーム
+        </a>
+    </div>
+
+    <!-- ★修正箇所: JSの読み込みも ../../ に変更 -->
+    <script src="../../js/script.js"></script>
+</body>
+
+</html>

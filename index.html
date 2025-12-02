@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学習ポータル</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            padding-bottom: 40px;
+        }
+
+        /* 科目ごとのセクションスタイル */
+        .subject-section {
+            margin-bottom: 40px;
+        }
+
+        .subject-title {
+            font-size: 1.2rem;
+            margin-left: 10px;
+            border-left: 4px solid #888;
+            padding-left: 10px;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .subject-title span {
+            font-size: 0.8em;
+            color: var(--text-sub);
+            font-weight: normal;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard-header">
+        <h1 style="margin:0; font-size:1.5rem;">Study Dashboard</h1>
+        <p class="text-sub" style="margin:5px 0 15px;">毎日の積み重ねが力になる</p>
+        <div class="progress-summary">
+            🏆 習得済み: <span id="total-mastered">0</span> 単語
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- ★ここにJSが自動でメニューを流し込みます -->
+        <div id="menu-container"></div>
+
+        <!-- ツール類 -->
+        <h2
+            style="font-size:1.2rem; margin-left:10px; border-left:4px solid #888; padding-left:10px; margin:30px 0 20px;">
+            Tools
+        </h2>
+        <div class="portal-grid">
+            <div class="portal-card" onclick="toggleDarkMode()" style="cursor:pointer;">
+                <div class="portal-icon">🌙</div>
+                <h3>Dark Mode</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- スクリプトの読み込み順序に注意 -->
+    <script src="js/script.js"></script>
+    <script src="js/menu.js"></script> <!-- 設定ファイル -->
+
+    <!-- メニュー生成ロジック（index.html専用なのでここに書くか、別ファイルにしてもOK） -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            renderMenu();
+        });
+
+        function renderMenu() {
+            const container = document.getElementById('menu-container');
+
+            // subjectSettingsのキー（english, math...）ごとにループ
+            Object.keys(subjectSettings).forEach(key => {
+                const setting = subjectSettings[key];
+
+                // この科目に該当するページデータを抽出
+                const pages = menuData.filter(item => item.id === key);
+
+                // ページが1つもなければ表示しない（スキップ）
+                if (pages.length === 0) return;
+
+                // セクション作成
+                const section = document.createElement('div');
+                section.className = 'subject-section';
+
+                // タイトル部分
+                section.innerHTML = `
+                    <h2 class="subject-title" style="border-color: var(--theme-color);">
+                        ${setting.name} <span>${setting.description}</span>
+                    </h2>
+                    <div class="portal-grid" id="grid-${key}"></div>
+                `;
+                container.appendChild(section);
+
+                // グリッド部分
+                const grid = section.querySelector(`#grid-${key}`);
+
+                // ページカードを生成して追加
+                pages.forEach(page => {
+                    const card = document.createElement('a');
+                    card.href = page.file;
+                    card.className = `portal-card ${setting.colorClass}`;
+                    card.innerHTML = `
+                        <div class="portal-icon">${setting.icon}</div>
+                        <h3>${setting.name}</h3>
+                        <p>${page.title}</p>
+                    `;
+                    grid.appendChild(card);
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
