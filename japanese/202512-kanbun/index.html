@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025年12月 文学基礎統一テスト</title>
+    <!-- 共通スタイルの読み込み -->
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<!-- 科目に合わせてクラスを変更（国語は subject-kokugo） -->
+
+<body class="subject-kokugo">
+
+    <header class="app-header">
+        <button class="nav-btn active" id="btn-study" onclick="switchTab('study')">📖 解説・暗記</button>
+        <button class="nav-btn" id="btn-test" onclick="switchTab('test')">📝 実践テスト</button>
+    </header>
+
+    <div class="container">
+
+        <!-- 解説タブ -->
+        <main id="content-study" class="tab-content active">
+
+            <div class="card">
+                <h2>1. 矛盾（韓非子）</h2>
+                <div class="text-box">
+                    <p><strong>重要語句・句法</strong></p>
+                    <ul>
+                        <li><span class="keyword">鬻（ひさ）ぐ</span>：売るという意味。</li>
+                        <li><span class="keyword">莫能陥也（よくとおすものなきなり）</span>：突き通せるものはない。（不可能の強調）</li>
+                        <li><span class="keyword">於物無不陥也（ものにおいてとおさざるなきなり）</span>：どんなものでも突き通さないことはない。（二重否定＝強い肯定）</li>
+                        <li><span class="keyword">弗能応（こたふることあたはざるなり）</span>：答えることができなかった。（不可能）</li>
+                    </ul>
+                    <p class="text-sub"><small>ポイント：つじつまが合わないことを指す「矛盾」の語源。法家である韓非子が説いた。</small></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>2. 朝三暮四（列子）</h2>
+                <div class="text-box">
+                    <p><strong>重要語句</strong></p>
+                    <ul>
+                        <li><span class="keyword">狙公（そこう）</span>：猿回しの老人。</li>
+                        <li><span class="keyword">芧（ちょ）</span>：どんぐり（栃の実）。</li>
+                        <li><span class="keyword">能（あた）ふ</span>：できる（返り点がある場合）。</li>
+                        <li><span class="keyword">將（まさに～んとす）</span>：今にも～しようとする（再読文字・未来/意思）。</li>
+                    </ul>
+                    <p><strong>寓意</strong></p>
+                    <p>実質は同じなのに、見かけの違いで喜怒が変わる愚かさ。また、言葉巧みに人をだますこと。</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>3. 性善と性悪（孟子・荀子）</h2>
+                <div class="text-box">
+                    <h3>性善説（孟子）</h3>
+                    <p>人の性は<span class="keyword">善</span>である。水が低い方へ流れるようなもの。</p>
+                    <ul>
+                        <li>「猶（なほ～のごとし）」：まるで～のようだ（比況）。</li>
+                        <li>「豈（あに～らんや）」：どうして～だろうか、いや～ない（反語）。</li>
+                    </ul>
+                    <hr>
+                    <h3>性悪説（荀子）</h3>
+                    <p>人の性は<span class="keyword">悪</span>である。善となるのは<span class="keyword">偽（作為・努力）</span>による。</p>
+                    <p>放置すれば争いが起きるため、<span class="keyword">礼義</span>や<span class="keyword">師法</span>によって矯正し、治める必要がある。
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>4. 無用の用（老子・荘子）</h2>
+                <div class="text-box">
+                    <h3>老子（無の用）</h3>
+                    <p>車輪の轂（こしき）や器の空間など、形のない<span class="keyword">無</span>の部分こそが役に立つ。</p>
+                    <h3>荘子（無用の用）</h3>
+                    <p>一見役に立たないと思われるものが、実は重要な役割を果たしている。</p>
+                    <p>地面の例：足を踏む場所以外（無用の地）があるからこそ、安心して歩ける。</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>5. 山月記（中島敦）</h2>
+                <div class="text-box">
+                    <p><strong>主人公：李徴</strong></p>
+                    <p>虎になった原因は、内面の<span class="keyword">臆病な自尊心</span>と<span class="keyword">尊大な羞恥心</span>にある。</p>
+                    <p><strong>象徴</strong></p>
+                    <ul>
+                        <li>山（虎・李徴）：孤高、獣性、転落。</li>
+                        <li>月（人・袁傪）：理知、明晰、昇進。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>6. 諸子百家まとめ</h2>
+                <div class="text-box">
+                    <ul>
+                        <li><strong>儒家</strong>：<span class="keyword">孔子・孟子・荀子</span>。<br>仁・義・礼を重視。徳治主義。</li>
+                        <li><strong>道家</strong>：<span class="keyword">老子・荘子・列子</span>。<br>無為自然。人為的な道徳を批判。</li>
+                        <li><strong>法家</strong>：<span class="keyword">韓非子</span>。<br>信賞必罰。法による統治を重視。</li>
+                    </ul>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- テストタブ -->
+        <main id="content-test" class="tab-content">
+
+            <!-- 第1問 -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 1：矛盾・読みと意味</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+
+                <p>次の文の空欄を埋めなさい。</p>
+                <div class="text-box">
+                    <ol>
+                        <li>「鬻」の読みは（ <span class="cloze">ひさ</span> ）ぐ、意味は（ <span class="cloze">売る</span> ）ことである。</li>
+                        <li>「莫能陥也」の書き下し文は「（ <span class="cloze">よくとおすものなきなり</span> ）」である。</li>
+                        <li>「於物無不陥也」に使われている「無不」は（ <span class="cloze">二重否定</span> ）という句法で、強い（ <span
+                                class="cloze">肯定</span> ）を表す。</li>
+                    </ol>
+                </div>
+
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <strong>解説</strong><br>
+                        「莫能～（よく～ものなし）」は不可能の強調表現。「無不（～ざるなき）」は「～しないものはない」＝「すべて～する」という意味になります。
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第2問 -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 2：諸子百家の思想</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+
+                <p>次の説明文に当てはまる学派（〇〇家）や語句を答えなさい。</p>
+                <div class="text-box">
+                    <ol>
+                        <li>孟子や荀子が含まれる学派。仁・義・礼を説く。<br>答え：（ <span class="cloze">儒家</span> ）</li>
+                        <li>老子や荘子が含まれる学派。無為自然を説く。<br>答え：（ <span class="cloze">道家</span> ）</li>
+                        <li>韓非子が含まれる学派。信賞必罰・法治を説く。<br>答え：（ <span class="cloze">法家</span> ）</li>
+                        <li>荀子が、人間の悪なる性質を矯正するために必要だと説いたもの。<br>答え：（ <span class="cloze">礼義</span> ）（または礼）</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- 第3問 -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 3：山月記</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+
+                <p>『山月記』についての記述の空欄を埋めなさい。</p>
+                <div class="text-box">
+                    李徴が虎になった原因について、彼は自らの内面にある（ <span class="cloze">臆病な自尊心</span> ）と（ <span class="cloze">尊大な羞恥心</span>
+                    ）が猛獣の正体であったと語っている。
+                    <br><br>
+                    また、李徴が「山」で虎として孤独に生きる一方、友人の（ <span class="cloze">袁傪</span> ）は「月」のように役人として世に出ており、対照的な存在として描かれている。
+                </div>
+            </div>
+
+            <!-- 第4問 -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 4：句法・書き下し</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+
+                <p>次の漢文の句法の読みや意味を答えなさい。</p>
+                <div class="text-box">
+                    <ul>
+                        <li>「豈水之性哉」<br>読み：（ <span class="cloze">あにみずのせいならんや</span> ）<br>句法：<strong>（ <span
+                                    class="cloze">反語</span> ）</strong></li>
+                        <li>「将限其食」<br>読み：（ <span class="cloze">まさにそのしょくをかぎらんとす</span> ）<br>句法：<strong>（ <span
+                                    class="cloze">再読文字</span> ）</strong>（意味：今にも～しようとする）</li>
+                        <li>「性猶湍水也」<br>読み：（ <span class="cloze">せいはなほたんすいのごときなり</span> ）<br>句法：<strong>（ <span
+                                    class="cloze">比況</span> ）</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- スティッキー操作バー -->
+    <div class="sticky-bar">
+        <!-- リセットボタン -->
+        <button class="control-btn" onclick="resetCloze()">
+            <span>↺</span><br>リセット
+        </button>
+
+        <button class="control-btn" onclick="toggleRedSheet()">
+            <span>🟥</span><br>赤シート
+        </button>
+
+        <!-- ストップウォッチ -->
+        <div class="control-btn" onclick="toggleTimer()">
+            <span id="timer-display" class="timer-display">00:00</span>
+            <br>ウォッチ
+        </div>
+
+        <button class="control-btn" onclick="toggleDarkMode()">
+            <span>🌙</span><br>ダーク
+        </button>
+
+        <a href="../../index.html" class="control-btn" style="text-decoration:none;">
+            <span>🏠</span><br>ホーム
+        </a>
+    </div>
+
+    <script src="../../js/script.js"></script>
+</body>
+
+</html>

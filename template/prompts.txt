@@ -121,12 +121,12 @@
             <span>🌙</span><br>ダーク
         </button>
 
-        <a href="../index.html" class="control-btn" style="text-decoration:none;">
+        <a href="../../index.html" class="control-btn" style="text-decoration:none;">
             <span>🏠</span><br>ホーム
         </a>
     </div>
 
-    <script src="../js/script.js"></script>
+    <script src="../../js/script.js"></script>
 </body>
 
 </html>

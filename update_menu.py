@@ -10,7 +10,7 @@ OUTPUT_FILE = "js/menu.js"
 TARGET_DIRS = {
     "english": "english",
     "math": "math",
-    "kokugo": "kokugo",
+    "japanese": "japanese",
     "science": "science",
     "social": "social",
     "info": "info"
