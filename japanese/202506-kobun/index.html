@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025年6月 古文統一テスト</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<!-- 科目に合わせてクラスを変更（フォントが明朝体になります） -->
+
+<body class="subject-kokugo">
+
+    <header class="app-header">
+        <button class="nav-btn active" id="btn-study" onclick="switchTab('study')">📖 解説・暗記</button>
+        <button class="nav-btn" id="btn-test" onclick="switchTab('test')">📝 実践テスト</button>
+    </header>
+
+    <div class="container">
+
+        <!-- 解説タブ -->
+        <main id="content-study" class="tab-content active">
+            <div class="card">
+                <h2>1. 伊勢物語「初冠」の重要語句</h2>
+                <div class="text-box">
+                    <ul>
+                        <li><span class="keyword">初冠</span>（ういこうぶり）：男子が成人して初めて冠をつける儀式。元服。</li>
+                        <li><span class="keyword">春日の里</span>：奈良の春日大社付近。ここでは男の領地があった場所。</li>
+                        <li><span class="keyword">なまめいたる</span>：若々しく美しい、優美である。</li>
+                        <li><span class="keyword">垣間見</span>（かいまみ）：物の隙間からこっそり覗き見ること。当時の恋愛のきっかけ。</li>
+                        <li><span class="keyword">おもほえず</span>：思いがけず。意外にも。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <h2>2. 和歌の修辞法</h2>
+                <div class="text-box">
+                    <p><strong>「春日野の 若紫の すり衣 しのぶの乱れ 限り知られず」</strong></p>
+                    <p>この歌には、以下の技法が使われています。</p>
+                    <ul>
+                        <li><span class="keyword">序詞</span>：「春日野の若紫のすり衣」が「しのぶ」を導き出す。</li>
+                        <li><span class="keyword">掛詞</span>：「しのぶ」に「信夫摺り」と「（恋心を）忍ぶ」が掛けられている。</li>
+                        <li><span class="keyword">本歌取り</span>：源融の「陸奥のしのぶもぢずり…」を踏まえている。</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <!-- テストタブ -->
+        <main id="content-test" class="tab-content">
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 1: 単語の意味</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+                <p>次の古語の意味として最も適切なものを答えなさい。</p>
+                <div class="text-box">
+                    1. いと <strong>なまめいたる</strong> 女はらから<br>
+                    意味：（ <span class="cloze">若々しく美しい</span> ）<br><br>
+                    2. ふるさとに <strong>いとはしたなくて</strong> ありければ<br>
+                    意味：（ <span class="cloze">不釣り合いで</span> ）
+                </div>
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <strong>正解: 1. 若々しく美しい / 2. 不釣り合いで（中途半端で）</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 2: 文法・係り結び</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+                <p>「昔人は、かくいちはやきみやびを<strong>なむ</strong>し<strong>ける</strong>。」について。</p>
+                <div class="text-box">
+                    この文の「なむ」は（ <span class="cloze">係助詞</span> ）であり、文末の「ける」は（ <span class="cloze">連体</span> ）形になっている。これを（
+                    <span class="cloze">係り結び</span> ）の法則という。
+                </div>
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <strong>正解: 係助詞 / 連体 / 係り結び</strong>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <div class="sticky-bar">
+        <button class="control-btn" onclick="resetCloze()"><span>↺</span><br>リセット</button>
+        <button class="control-btn" onclick="toggleRedSheet()"><span>🟥</span><br>赤シート</button>
+        <div class="control-btn" onclick="toggleTimer()"><span id="timer-display"
+                class="timer-display">00:00</span><br>ウォッチ</div>
+        <button class="control-btn" onclick="toggleDarkMode()"><span>🌙</span><br>ダーク</button>
+        <a href="../../index.html" class="control-btn" style="text-decoration:none;"><span>🏠</span><br>ホーム</a>
+    </div>
+
+    <script src="../../js/script.js"></script>
+</body>
+
+</html>

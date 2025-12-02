@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025年6月数学: ベクトル</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- ★ここを追加★ MathJaxの設定: $マークを数式として認識させる -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <!-- 数式表示用ライブラリ -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body class="subject-math">
+
+    <header class="app-header">
+        <button class="nav-btn active" id="btn-study" onclick="switchTab('study')">📖 解説・暗記</button>
+        <button class="nav-btn" id="btn-test" onclick="switchTab('test')">📝 実践テスト</button>
+    </header>
+
+    <div class="container">
+
+        <!-- 解説タブ -->
+        <main id="content-study" class="tab-content active">
+            <div class="card">
+                <h2>1. ベクトルの内積</h2>
+                <div class="text-box">
+                    <p>ベクトル $\vec{a}$ と $\vec{b}$ のなす角を $\theta$ とするとき、内積は次のように定義されます。</p>
+                    <p>$\vec{a} \cdot \vec{b} = |\vec{a}||\vec{b}|\cos\theta$</p>
+                    <p>成分表示 $\vec{a} = (a_1, a_2), \vec{b} = (b_1, b_2)$ の場合：</p>
+                    <p>$\vec{a} \cdot \vec{b} = a_1b_1 + a_2b_2$</p>
+                </div>
+            </div>
+            <div class="card">
+                <h2>2. 垂直条件と平行条件</h2>
+                <div class="text-box">
+                    <ul>
+                        <li><strong>垂直条件:</strong> $\vec{a} \perp \vec{b} \iff \vec{a} \cdot \vec{b} = $ <span
+                                class="keyword">0</span></li>
+                        <li><strong>平行条件:</strong> $\vec{a} // \vec{b} \iff \vec{a} = k\vec{b}$ （$k$は実数）</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <!-- テストタブ -->
+        <main id="content-test" class="tab-content">
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 1: 内積の計算</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+                <p>次のベクトルの内積を求めなさい。</p>
+                <div class="text-box">
+                    $|\vec{a}| = 3, |\vec{b}| = 4$ で、なす角が $60^\circ$ のとき<br>
+                    $\vec{a} \cdot \vec{b} =$ （ <span class="cloze">6</span> ）
+                </div>
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <strong>正解: 6</strong>
+                        <p class="text-sub" style="font-size:0.9rem;">解説: $3 \times 4 \times \cos 60^\circ = 12 \times
+                            \frac{1}{2} = 6$</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 2: 成分と垂直条件</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+                <p>$\vec{a} = (2, -4)$, $\vec{b} = (x, 3)$ が垂直であるとき、$x$ の値を求めよ。</p>
+                <div class="text-box">
+                    $x =$ （ <span class="cloze">6</span> ）
+                </div>
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <strong>正解: 6</strong>
+                        <p class="text-sub" style="font-size:0.9rem;">解説: 垂直条件より内積が0。<br>
+                            $2x + (-4) \times 3 = 0$<br>
+                            $2x - 12 = 0$ より $x = 6$</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <div class="sticky-bar">
+        <button class="control-btn" onclick="resetCloze()"><span>↺</span><br>リセット</button>
+        <button class="control-btn" onclick="toggleRedSheet()"><span>🟥</span><br>赤シート</button>
+        <div class="control-btn" onclick="toggleTimer()"><span id="timer-display"
+                class="timer-display">00:00</span><br>ウォッチ</div>
+        <button class="control-btn" onclick="toggleDarkMode()"><span>🌙</span><br>ダーク</button>
+        <a href="../../index.html" class="control-btn" style="text-decoration:none;"><span>🏠</span><br>ホーム</a>
+    </div>
+
+    <script src="../../js/script.js"></script>
+</body>
+
+</html>

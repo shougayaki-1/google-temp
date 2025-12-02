@@ -71,45 +71,47 @@
             renderMenu();
         });
 
+        /* index.html 内の renderMenu関数を修正 */
+
         function renderMenu() {
             const container = document.getElementById('menu-container');
+            container.innerHTML = '';
 
-            // subjectSettingsのキー（english, math...）ごとにループ
             Object.keys(subjectSettings).forEach(key => {
                 const setting = subjectSettings[key];
-
-                // この科目に該当するページデータを抽出
                 const pages = menuData.filter(item => item.id === key);
 
-                // ページが1つもなければ表示しない（スキップ）
                 if (pages.length === 0) return;
 
-                // セクション作成
                 const section = document.createElement('div');
                 section.className = 'subject-section';
 
-                // タイトル部分
                 section.innerHTML = `
-                    <h2 class="subject-title" style="border-color: var(--theme-color);">
-                        ${setting.name} <span>${setting.description}</span>
-                    </h2>
-                    <div class="portal-grid" id="grid-${key}"></div>
-                `;
+            <h2 class="subject-title" style="border-color: var(--theme-color);">
+                ${setting.name} <span>${setting.description}</span>
+            </h2>
+            <div class="portal-grid" id="grid-${key}"></div>
+        `;
                 container.appendChild(section);
 
-                // グリッド部分
                 const grid = section.querySelector(`#grid-${key}`);
 
-                // ページカードを生成して追加
                 pages.forEach(page => {
                     const card = document.createElement('a');
                     card.href = page.file;
                     card.className = `portal-card ${setting.colorClass}`;
+
+                    // ★カテゴリがあれば使い、なければ教科名を使う
+                    const cardName = page.category ? page.category : setting.name;
+
+                    // ★個別アイコンがあれば使い、なければ教科アイコンを使う
+                    const cardIcon = page.icon ? page.icon : setting.icon;
+
                     card.innerHTML = `
-                        <div class="portal-icon">${setting.icon}</div>
-                        <h3>${setting.name}</h3>
-                        <p>${page.title}</p>
-                    `;
+                <div class="portal-icon">${cardIcon}</div>
+                <h3>${cardName}</h3>
+                <p>${page.title}</p>
+            `;
                     grid.appendChild(card);
                 });
             });

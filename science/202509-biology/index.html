@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025年9月 生物統一テスト</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<!-- 理科クラス -->
+
+<body class="subject-science">
+
+    <header class="app-header">
+        <button class="nav-btn active" id="btn-study" onclick="switchTab('study')">📖 解説・暗記</button>
+        <button class="nav-btn" id="btn-test" onclick="switchTab('test')">📝 実践テスト</button>
+    </header>
+
+    <div class="container">
+
+        <!-- 解説タブ -->
+        <main id="content-study" class="tab-content active">
+            <div class="card">
+                <h2>1. 細胞の構造</h2>
+                <div class="text-box">
+                    <p>すべての生物は<span class="keyword">細胞</span>からできており、細胞は生命の基本単位です。これを細胞説といい、シュライデンやシュワン、フィルヒョーらが提唱しました。
+                    </p>
+                    <hr>
+                    <ul>
+                        <li><strong>核：</strong> <span class="keyword">二重膜</span>で囲まれ、遺伝物質DNAを含む。</li>
+                        <li><strong>ミトコンドリア：</strong> 呼吸を行い、ATPを合成する。<span class="keyword">独自のDNA</span>を持つ。</li>
+                        <li><strong>葉緑体：</strong> 植物細胞に存在。光合成を行う。こちらも独自のDNAを持つ。</li>
+                        <li><strong>リソソーム：</strong> 分解酵素を含み、細胞内消化を行う。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>2. 細胞膜と物質輸送</h2>
+                <div class="text-box">
+                    <p>細胞膜は<span class="keyword">リン脂質</span>の二重層にタンパク質がモザイク状に浮かぶ「流動モザイクモデル」をとっています。</p>
+                    <ul>
+                        <li><strong>受動輸送：</strong> 濃度勾配に従う移動（例：拡散）。エネルギー不要。</li>
+                        <li><strong>能動輸送：</strong> 濃度勾配に逆らう移動（例：ナトリウムポンプ）。<span class="keyword">ATP</span>のエネルギーが必要。
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <!-- テストタブ -->
+        <main id="content-test" class="tab-content">
+
+            <!-- 問1 -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 1</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+                <p>次の文の空欄に当てはまる語句を答えよ。</p>
+                <div class="text-box">
+                    原核細胞と真核細胞の最も決定的な違いは、核膜に包まれた（ <span class="cloze">核</span> ）の有無である。<br>
+                    また、動物細胞と植物細胞に共通してみられる細胞小器官のうち、呼吸の場となるのは（ <span class="cloze">ミトコンドリア</span> ）である。
+                </div>
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <strong>正解: 核 / ミトコンドリア</strong>
+                        <p class="text-sub"><small>※ミトコンドリアと葉緑体は二重膜構造を持ちます。</small></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 問2 -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 2</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+                <p>タンパク質の合成と輸送について。</p>
+                <div class="text-box">
+                    核のDNA情報をもとに（ <span class="cloze">リボソーム</span> ）でタンパク質が合成される。<br>
+                    その後、小胞体を経て（ <span class="cloze">ゴルジ体</span> ）へ輸送され、濃縮・選別されて細胞外へ分泌される。
+                </div>
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <strong>正解: リボソーム / ゴルジ体</strong>
+                        <p class="text-sub"><small>※ゴルジ体は細胞の「配送センター」の役割を果たします。</small></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 問3 -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 3</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+                <p>物質輸送に関する記述。</p>
+                <div class="text-box">
+                    ナトリウムポンプは、ATPのエネルギーを使って濃度勾配に（ <span class="cloze">逆らって</span> ）イオンを輸送する。<br>
+                    このような輸送様式を（ <span class="cloze">能動輸送</span> ）という。
+                </div>
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <strong>正解: 逆らって / 能動輸送</strong>
+                        <p class="text-sub"><small>※受動輸送は濃度勾配に「従って」移動します。</small></p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- スティッキー操作バー -->
+    <div class="sticky-bar">
+        <button class="control-btn" onclick="resetCloze()"><span>↺</span><br>リセット</button>
+        <button class="control-btn" onclick="toggleRedSheet()"><span>🟥</span><br>赤シート</button>
+        <div class="control-btn" onclick="toggleTimer()">
+            <span id="timer-display" class="timer-display">00:00</span><br>ウォッチ
+        </div>
+        <button class="control-btn" onclick="toggleDarkMode()"><span>🌙</span><br>ダーク</button>
+        <a href="../../index.html" class="control-btn" style="text-decoration:none;">
+            <span>🏠</span><br>ホーム
+        </a>
+    </div>
+
+    <script src="../../js/script.js"></script>
+</body>
+
+</html>

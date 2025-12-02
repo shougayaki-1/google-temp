@@ -5,8 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ページタイトル</title>
-    <!-- ★修正箇所: 階層が深くなったので ../../ に変更 -->
+    <!-- 共通スタイルの読み込み -->
     <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- ★MathJax設定 (数学用) -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <!-- 科目に合わせてクラスを変更 -->
@@ -25,9 +37,8 @@
             <div class="card">
                 <h2>1. 単元の概要</h2>
                 <div class="text-box">
-                    <!-- 画像を使う場合は同じフォルダに置いてパス指定が楽になります -->
-                    <!-- <img src="chart.png" alt="図解" style="max-width:100%;"> -->
                     解説文。<span class="keyword">重要語句</span>タグを使用。
+                    <!-- 数式の例: $\vec{a} \cdot \vec{b}$ -->
                 </div>
             </div>
         </main>
@@ -65,14 +76,11 @@
             <span id="timer-display" class="timer-display">00:00</span><br>ウォッチ
         </div>
         <button class="control-btn" onclick="toggleDarkMode()"><span>🌙</span><br>ダーク</button>
-
-        <!-- ★修正箇所: ホームへのリンクも ../../ に変更 -->
         <a href="../../index.html" class="control-btn" style="text-decoration:none;">
             <span>🏠</span><br>ホーム
         </a>
     </div>
 
-    <!-- ★修正箇所: JSの読み込みも ../../ に変更 -->
     <script src="../../js/script.js"></script>
 </body>
 

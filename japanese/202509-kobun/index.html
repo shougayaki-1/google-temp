@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025年9月 文学基礎統一テスト</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- MathJaxは国語では不要だが、テンプレート維持のため残しても良い -->
+</head>
+
+<!-- 国語クラス（明朝体） -->
+
+<body class="subject-kokugo">
+
+    <header class="app-header">
+        <button class="nav-btn active" id="btn-study" onclick="switchTab('study')">📖 解説・暗記</button>
+        <button class="nav-btn" id="btn-test" onclick="switchTab('test')">📝 実践テスト</button>
+    </header>
+
+    <div class="container">
+
+        <!-- 解説タブ -->
+        <main id="content-study" class="tab-content active">
+            <div class="card">
+                <h2>1. 桐壺 - 重要語句</h2>
+                <div class="text-box">
+                    <p>『源氏物語』冒頭「桐壺」の巻における重要語句の確認。</p>
+                    <ul>
+                        <li><span class="keyword">時めく</span>： 寵愛を受けて栄えること。</li>
+                        <li><span class="keyword">あつし</span>（篤し）： 病気がちである、病が重い。</li>
+                        <li><span class="keyword">はかばかし</span>： しっかりしている、頼りになる。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>2. 敬語の識別</h2>
+                <div class="text-box">
+                    <p>主語や動作の対象を捉えることが重要です。</p>
+                    <ul>
+                        <li><strong>さぶらふ：</strong> 丁寧語「あります」または謙譲語「お仕えする」。<br>
+                            文脈：更衣たちが帝に「お仕えする」。</li>
+                        <li><strong>たまふ：</strong> 尊敬語「〜なさる」。<br>
+                            文脈：動作主（更衣など）を高める。</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <!-- テストタブ -->
+        <main id="content-test" class="tab-content">
+
+            <!-- 問1 -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 1</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+                <p>文中の重要古語の意味を答えよ。</p>
+                <div class="text-box">
+                    「すぐれて<span class="keyword">時めき</span>たまふありけり」<br>
+                    意味：（ <span class="cloze">寵愛を受ける</span> ）こと。<br><br>
+                    「いと<span class="keyword">あつしく</span>なりゆき」<br>
+                    意味：（ <span class="cloze">病気がち</span> ）になること。
+                </div>
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <strong>正解: 寵愛を受ける / 病気がち（病が重い）</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 問2 -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 2</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+                <p>内容理解（桐壺）。</p>
+                <div class="text-box">
+                    桐壺更衣が宮中で心細く思っていた主な理由は、父の大納言が亡くなっており、しっかりとした（ <span class="cloze">後見</span> ）がいなかったからである。
+                </div>
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <strong>正解: 後見（後ろ盾）</strong>
+                        <p class="text-sub"><small>※「はかばかしき後見しなければ」の部分。</small></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 問3（若紫） -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 3</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+                <p>若紫の場面における語彙。</p>
+                <div class="text-box">
+                    尼君の様子を「いと白う<span class="keyword">あてに</span>」と描写している。<br>
+                    「あてなり（貴なり）」の意味は（ <span class="cloze">身分が高い</span> ）、または上品だということである。
+                </div>
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <strong>正解: 身分が高い（高貴だ）</strong>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <div class="sticky-bar">
+        <button class="control-btn" onclick="resetCloze()"><span>↺</span><br>リセット</button>
+        <button class="control-btn" onclick="toggleRedSheet()"><span>🟥</span><br>赤シート</button>
+        <div class="control-btn" onclick="toggleTimer()">
+            <span id="timer-display" class="timer-display">00:00</span><br>ウォッチ
+        </div>
+        <button class="control-btn" onclick="toggleDarkMode()"><span>🌙</span><br>ダーク</button>
+        <a href="../../index.html" class="control-btn" style="text-decoration:none;">
+            <span>🏠</span><br>ホーム
+        </a>
+    </div>
+
+    <script src="../../js/script.js"></script>
+</body>
+
+</html>

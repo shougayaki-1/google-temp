@@ -43,17 +43,27 @@
 以下のコードをベースに、中身を書き換えてください。
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ページタイトル</title>
-    <!-- 共通スタイルの読み込み (階層に注意: ../../css/) -->
+    <!-- 共通スタイルの読み込み -->
     <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- ★MathJax設定 (数学用) -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <!-- 科目に合わせてクラスを変更 -->
-
 <body class="subject-english">
 
     <header class="app-header">
@@ -62,14 +72,14 @@
     </header>
 
     <div class="container">
-
+        
         <!-- 解説タブ -->
         <main id="content-study" class="tab-content active">
             <div class="card">
                 <h2>1. 単元の概要</h2>
-                <!-- AIへの指示: 色指定は style="" を使わず、クラス指定などで行わせる -->
                 <div class="text-box">
                     解説文。<span class="keyword">重要語句</span>タグを使用。
+                    <!-- 数式の例: $\vec{a} \cdot \vec{b}$ -->
                 </div>
             </div>
         </main>
@@ -78,49 +88,34 @@
         <main id="content-test" class="tab-content">
             <div class="card">
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-                    <!-- class="text-sub" を使って色を指定（style="color:#ccc"などは使わない） -->
                     <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 1</h3>
-                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
-                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)" style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
                 </div>
-
-                <p>次の文章の空欄を埋めなさい。</p>
+                
+                <p>問題文...</p>
                 <div class="text-box">
-                    日本の首都は（ <span class="cloze">東京</span> ）である。
+                    （ <span class="cloze">正解</span> ）
                 </div>
 
                 <div class="answer-area">
                     <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
                     <div class="answer-content">
-                        <strong>正解: 東京</strong>
+                        <strong>正解: ...</strong>
                     </div>
                 </div>
             </div>
         </main>
-
+        
     </div>
 
-    <!-- スティッキー操作バー (更新版) -->
+    <!-- スティッキー操作バー -->
     <div class="sticky-bar">
-        <!-- リセットボタン (New) -->
-        <button class="control-btn" onclick="resetCloze()">
-            <span>↺</span><br>リセット
-        </button>
-
-        <button class="control-btn" onclick="toggleRedSheet()">
-            <span>🟥</span><br>赤シート
-        </button>
-
-        <!-- ストップウォッチ (名称変更) -->
+        <button class="control-btn" onclick="resetCloze()"><span>↺</span><br>リセット</button>
+        <button class="control-btn" onclick="toggleRedSheet()"><span>🟥</span><br>赤シート</button>
         <div class="control-btn" onclick="toggleTimer()">
-            <span id="timer-display" class="timer-display">00:00</span>
-            <br>ウォッチ
+            <span id="timer-display" class="timer-display">00:00</span><br>ウォッチ
         </div>
-
-        <button class="control-btn" onclick="toggleDarkMode()">
-            <span>🌙</span><br>ダーク
-        </button>
-
+        <button class="control-btn" onclick="toggleDarkMode()"><span>🌙</span><br>ダーク</button>
         <a href="../../index.html" class="control-btn" style="text-decoration:none;">
             <span>🏠</span><br>ホーム
         </a>
@@ -128,5 +123,4 @@
 
     <script src="../../js/script.js"></script>
 </body>
-
 </html>

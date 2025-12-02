@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025年6月 化学統一テスト
+    </title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body class="subject-science">
+
+    <header class="app-header">
+        <button class="nav-btn active" id="btn-study" onclick="switchTab('study')">📖 解説・暗記</button>
+        <button class="nav-btn" id="btn-test" onclick="switchTab('test')">📝 実践テスト</button>
+    </header>
+
+    <div class="container">
+
+        <!-- 解説タブ -->
+        <main id="content-study" class="tab-content active">
+            <div class="card">
+                <h2>1. 物質の三態と蒸気圧</h2>
+                <div class="text-box">
+                    <p>液体が蒸発も凝縮もせず、見かけ上変化が起こらない状態を<span class="keyword">気液平衡</span>といいます。このとき、蒸気が示す圧力をその液体の<span
+                            class="keyword">蒸気圧</span>（飽和蒸気圧）といいます。</p>
+                    <p>液体に不揮発性の物質を溶かすと、純粋な液体に比べて蒸気圧が低くなります。これを<span class="keyword">蒸気圧降下</span>といいます。</p>
+                </div>
+            </div>
+            <div class="card">
+                <h2>2. 気体の法則</h2>
+                <div class="text-box">
+                    <ul>
+                        <li><strong>ボイルの法則:</strong> 温度一定のとき、体積 $V$ は圧力 $P$ に<span class="keyword">反比例</span>する ($PV =
+                            k$)。</li>
+                        <li><strong>シャルルの法則:</strong> 圧力一定のとき、体積 $V$ は絶対温度 $T$ に<span class="keyword">比例</span>する ($V/T
+                            = k$)。</li>
+                        <li><strong>気体の状態方程式:</strong> $PV = nRT$ （$R$は気体定数）。</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <!-- テストタブ -->
+        <main id="content-test" class="tab-content">
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 1: 用語の確認</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+                <p>次の文章の空欄を埋めなさい。</p>
+                <div class="text-box">
+                    一定量の気体の体積は、圧力が一定のとき、絶対温度に（ <span class="cloze">比例</span> ）する。これを（ <span class="cloze">シャルル</span>
+                    ）の法則という。<br>
+                    また、液体が沸騰しているとき、その液体の蒸気圧は（ <span class="cloze">外圧</span> ）と等しくなっている。
+                </div>
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <strong>正解: 比例 / シャルル / 外圧</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 2: 計算問題</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+                <p>27℃、1.5 × 10<sup>5</sup> Pa で 3.0 L の体積を占める理想気体がある。温度を 127℃ に上げ、圧力を 2.0 × 10<sup>5</sup> Pa
+                    にすると、気体の体積は何 L になるか。（有効数字2桁）</p>
+                <div class="text-box">
+                    答え：（ <span class="cloze">3.0</span> ）L
+                </div>
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <p class="text-sub" style="font-size:0.9rem;">解説: ボイル・シャルルの法則 $\frac{P_1V_1}{T_1} =
+                            \frac{P_2V_2}{T_2}$ を用いる。<br>
+                            $T_1 = 300\text{K}, T_2 = 400\text{K}$<br>
+                            $\frac{1.5 \times 10^5 \times 3.0}{300} = \frac{2.0 \times 10^5 \times V_2}{400}$<br>
+                            これより $V_2 = 3.0$ L</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <div class="sticky-bar">
+        <button class="control-btn" onclick="resetCloze()"><span>↺</span><br>リセット</button>
+        <button class="control-btn" onclick="toggleRedSheet()"><span>🟥</span><br>赤シート</button>
+        <div class="control-btn" onclick="toggleTimer()"><span id="timer-display"
+                class="timer-display">00:00</span><br>ウォッチ</div>
+        <button class="control-btn" onclick="toggleDarkMode()"><span>🌙</span><br>ダーク</button>
+        <a href="../../index.html" class="control-btn" style="text-decoration:none;"><span>🏠</span><br>ホーム</a>
+    </div>
+
+    <script src="../../js/script.js"></script>
+    <!-- 数式表示用 (必要に応じて) -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+
+</html>

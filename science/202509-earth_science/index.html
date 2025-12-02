@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025年9月 地学統一テスト</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<!-- 理科クラス -->
+
+<body class="subject-science">
+
+    <header class="app-header">
+        <button class="nav-btn active" id="btn-study" onclick="switchTab('study')">📖 解説・暗記</button>
+        <button class="nav-btn" id="btn-test" onclick="switchTab('test')">📝 実践テスト</button>
+    </header>
+
+    <div class="container">
+
+        <!-- 解説タブ -->
+        <main id="content-study" class="tab-content active">
+            <div class="card">
+                <h2>1. プレート境界</h2>
+                <div class="text-box">
+                    <p>地球表面は十数枚の<span class="keyword">プレート</span>（岩盤）に覆われています。</p>
+                    <ul>
+                        <li><strong>広がる境界：</strong> <span class="keyword">海嶺</span>などが形成される。新しいプレートが生まれる場所。</li>
+                        <li><strong>狭まる（収束）境界：</strong> <span class="keyword">海溝</span>や褶曲山脈（ヒマラヤなど）が形成される。</li>
+                        <li><strong>ずれる境界：</strong> トランスフォーム断層が形成される。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>2. 地震の波</h2>
+                <div class="text-box">
+                    <p>地震波にはP波とS波があります。</p>
+                    <ul>
+                        <li><strong>P波（Primary wave）：</strong> 縦波。速い。<span class="keyword">初期微動</span>を起こす。</li>
+                        <li><strong>S波（Secondary wave）：</strong> 横波。遅い。<span class="keyword">主要動</span>を起こす。</li>
+                        <li><strong>大森公式：</strong> 震源距離 $D$ は、初期微動継続時間 $t$ に比例する。<br>
+                            $$ D = k \times t $$
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <!-- テストタブ -->
+        <main id="content-test" class="tab-content">
+
+            <!-- 問1 -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 1</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+                <p>プレートテクトニクスについて答えよ。</p>
+                <div class="text-box">
+                    海嶺のようにプレートが互いに離れていく場所を（ <span class="cloze">広がる</span> ）境界という。<br>
+                    一方、日本海溝のようにプレートが沈み込む場所を（ <span class="cloze">収束</span> ）する境界という。
+                </div>
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <strong>正解: 広がる / 収束（狭まる）</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 問2 (計算) -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 2</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+                <p>地震波の計算問題。</p>
+                <div class="text-box">
+                    震源から100km離れた地点で、初期微動継続時間が12.5秒であった。<br>
+                    P波の速さを $8\text{km/s}$ とすると、S波の速さは（ <span class="cloze">4</span> ）$\text{km/s}$ である。
+                </div>
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <strong>正解: 4</strong>
+                        <p class="text-sub"><small>解説: P波到達時間 $100 \div 8 = 12.5$秒。初期微動が12.5秒なので、S波到達は $12.5 + 12.5 =
+                                25$秒後。よって $100 \div 25 = 4$。</small></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 問3 -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 3</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+                <p>マグマの性質について。</p>
+                <div class="text-box">
+                    二酸化ケイ素（$\text{SiO}_2$）の量が多いマグマは、粘性が（ <span class="cloze">高い</span> ）。<br>
+                    そのため、噴火の様式は（ <span class="cloze">激しい</span> ）ものになりやすい。
+                </div>
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <strong>正解: 高い / 激しい（爆発的な）</strong>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <div class="sticky-bar">
+        <button class="control-btn" onclick="resetCloze()"><span>↺</span><br>リセット</button>
+        <button class="control-btn" onclick="toggleRedSheet()"><span>🟥</span><br>赤シート</button>
+        <div class="control-btn" onclick="toggleTimer()">
+            <span id="timer-display" class="timer-display">00:00</span><br>ウォッチ
+        </div>
+        <button class="control-btn" onclick="toggleDarkMode()"><span>🌙</span><br>ダーク</button>
+        <a href="../../index.html" class="control-btn" style="text-decoration:none;">
+            <span>🏠</span><br>ホーム
+        </a>
+    </div>
+
+    <script src="../../js/script.js"></script>
+</body>
+
+</html>

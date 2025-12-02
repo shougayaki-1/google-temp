@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025年6月 地学統一テスト</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body class="subject-science">
+
+    <header class="app-header">
+        <button class="nav-btn active" id="btn-study" onclick="switchTab('study')">📖 解説・暗記</button>
+        <button class="nav-btn" id="btn-test" onclick="switchTab('test')">📝 実践テスト</button>
+    </header>
+
+    <div class="container">
+
+        <!-- 解説タブ -->
+        <main id="content-study" class="tab-content active">
+            <div class="card">
+                <h2>1. 地球の形と大きさ</h2>
+                <div class="text-box">
+                    <p>平均海水面を陸地にまで延長したと仮定した、地球の理論的な形を<span class="keyword">ジオイド</span>といいます。これは重力の等ポテンシャル面と一致します。</p>
+                    <p>地球内部は層構造をしており、外側から<span class="keyword">地殻</span>、<span class="keyword">マントル</span>、<span
+                            class="keyword">核</span>（外核・内核）に分かれています。</p>
+                </div>
+            </div>
+            <div class="card">
+                <h2>2. 地震波と不連続面</h2>
+                <div class="text-box">
+                    <ul>
+                        <li><strong>P波:</strong> 縦波。固体・液体・気体を伝わる。</li>
+                        <li><strong>S波:</strong> 横波。固体のみ伝わる（液体である<span class="keyword">外核</span>は伝わらない）。</li>
+                        <li><strong>モホロビチッチ不連続面:</strong> 地殻とマントルの境界。</li>
+                        <li><strong>グーテンベルク不連続面:</strong> マントルと外核の境界。</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <!-- テストタブ -->
+        <main id="content-test" class="tab-content">
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 1: 地球の構造</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+                <p>次の文章の空欄を埋めなさい。</p>
+                <div class="text-box">
+                    地球の外核は（ <span class="cloze">液体</span> ）の状態であるため、地震波のうち（ <span class="cloze">S</span>
+                    ）波は伝わらない。これにより、震源の反対側に地震波が届かない（ <span class="cloze">シャドーゾーン</span> ）と呼ばれる領域が生じる。
+                </div>
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <strong>正解: 液体 / S / シャドーゾーン</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">Question 2: 重力異常</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+                <p>山脈地域などで、地下に密度の小さい地殻の「根」が存在するために、ブーゲー異常が負の値を示す現象を説明する考え方を何というか。</p>
+                <div class="text-box">
+                    答え：（ <span class="cloze">アイソスタシー</span> ）
+                </div>
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答を表示 ▼</button>
+                    <div class="answer-content">
+                        <strong>正解: アイソスタシー</strong>
+                        <p class="text-sub" style="font-size:0.9rem;">解説: 地殻がマントルに浮かんで釣り合っているという考え方です。</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <div class="sticky-bar">
+        <button class="control-btn" onclick="resetCloze()"><span>↺</span><br>リセット</button>
+        <button class="control-btn" onclick="toggleRedSheet()"><span>🟥</span><br>赤シート</button>
+        <div class="control-btn" onclick="toggleTimer()"><span id="timer-display"
+                class="timer-display">00:00</span><br>ウォッチ</div>
+        <button class="control-btn" onclick="toggleDarkMode()"><span>🌙</span><br>ダーク</button>
+        <a href="../../index.html" class="control-btn" style="text-decoration:none;"><span>🏠</span><br>ホーム</a>
+    </div>
+
+    <script src="../../js/script.js"></script>
+</body>
+
+</html>
