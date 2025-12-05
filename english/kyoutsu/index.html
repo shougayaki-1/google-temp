@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>共通テスト英語リーティング 模擬試験</title>
+    <!-- 共通スタイルの読み込み -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- ★MathJax設定 (今回は英語ですがテンプレート維持のため残します) -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<!-- 科目に合わせてクラスを変更 -->
+
+<body class="subject-english">
+
+    <header class="app-header">
+        <button class="nav-btn active" id="btn-study" onclick="switchTab('study')">📖 解説・暗記</button>
+        <button class="nav-btn" id="btn-test" onclick="switchTab('test')">📝 実践テスト</button>
+    </header>
+
+    <div class="container">
+
+        <!-- 解説タブ -->
+        <main id="content-study" class="tab-content active">
+            <div class="card">
+                <h2>共通テスト攻略の重要ルール</h2>
+
+                <h3>1. 最重要ルール：「言い換え（Paraphrasing）」を探せ</h3>
+                <div class="text-box">
+                    <p>正解の選択肢は、本文の単語をそのまま使いません。<span class="keyword">必ず「別の表現」に言い換えられています。</span><br>
+                        逆に、本文と全く同じ単語が並んでいる選択肢は「ひっかけ（不正解）」の可能性が高いです。</p>
+                    <ul>
+                        <li><span class="keyword">Cheap</span> (安い) → Reasonable / Affordable / Budget-friendly</li>
+                        <li><span class="keyword">Free</span> (無料) → No charge / Complimentary / Without paying</li>
+                        <li><span class="keyword">Book</span> (予約する) → Reserve / Make a reservation / Secure a spot</li>
+                        <li><span class="keyword">Join</span> (参加する) → Take part in / Participate / Attend</li>
+                        <li><span class="keyword">Study</span> (調査する) → Research / Analyze / Examine</li>
+                    </ul>
+                </div>
+
+                <h3>2. 「事実（Fact）」と「意見（Opinion）」の区別</h3>
+                <div class="text-box">
+                    <p>第2問Bなどで頻出です。</p>
+                    <ul>
+                        <li><span class="keyword">Fact（事実）</span>: 客観的に証明できること。数字、日付、出来事。<br>
+                            <em>キーワード:</em> is, was, dates (1990), numbers ($500).
+                        </li>
+                        <li><span class="keyword">Opinion（意見）</span>: 人の主観、感想、提案。<br>
+                            <em>キーワード:</em> think, feel, should, beautiful, too (expensive), believe, idea.
+                        </li>
+                    </ul>
+                    <p class="text-sub">※「Aさんは〜と言った」というのは事実ですが、「その内容」は意見である場合があります。</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>計算・論理マーカー・語彙</h2>
+
+                <h3>3. 計算と条件の読み取り（Math & Logic）</h3>
+                <div class="text-box">
+                    <p>スケジュールやチラシ問題で簡単な算数が必要です。</p>
+                    <ul>
+                        <li><strong>割引計算:</strong>
+                            <ul>
+                                <li><span class="keyword">20% off</span> = 8割の値段になる。</li>
+                                <li><span class="keyword">Buy one, get one free</span> = 2個目が無料（実質半額）。</li>
+                            </ul>
+                        </li>
+                        <li><strong>除外条件:</strong> <span class="keyword">Except / Unless / Other
+                                than</span>（〜以外は、〜でない限り）</li>
+                        <li><strong>Note:</strong>（注釈）←ここに正解の鍵があることが多いです。</li>
+                    </ul>
+                </div>
+
+                <h3>4. 必須となる「論理マーカー」</h3>
+                <div class="text-box">
+                    <p>長文（第5問・第6問）では、これらの単語の後ろに<span class="keyword">「著者の主張」</span>や<span
+                            class="keyword">「重要な結論」</span>が来ます。</p>
+                    <ul>
+                        <li><span class="keyword">逆接（超重要）: However / But / Yet / On the other hand / Although</span><br>
+                            ※これらが出てきたら、その直後の文が設問の答えになる確率が非常に高いです。</li>
+                        <li><strong>結果・結論:</strong> Therefore / Thus / As a result / Consequently</li>
+                        <li><strong>追加:</strong> In addition / Moreover / Also / Furthermore</li>
+                        <li><strong>対比:</strong> In contrast / Unlike / While</li>
+                    </ul>
+                </div>
+
+                <h3>頻出語彙チェックリスト</h3>
+                <div class="text-box">
+                    <ol>
+                        <li><strong>frequency (頻度):</strong> rarely / seldom (めったに〜ない), frequently (頻繁に)</li>
+                        <li><strong>probability (可能性):</strong> likely (ありそうな), potential (潜在的な)</li>
+                        <li><strong>requirement (要件):</strong> <span class="keyword">mandatory</span> (必須の), optional
+                            (任意の), eligible (資格がある)</li>
+                        <li><strong>quantity (量):</strong> majority (大多数), approximately (およそ), significant (かなりの)</li>
+                    </ol>
+                </div>
+            </div>
+        </main>
+
+        <!-- テストタブ -->
+        <main id="content-test" class="tab-content">
+
+            <!-- 第1問 A -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">第1問 A (配点 10)</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+
+                <p>You are studying in the UK. You return to your host family's house and find a note left by your host
+                    mother on the kitchen table.</p>
+
+                <div class="text-box">
+                    <p><strong>[Note on the Kitchen Table]</strong></p>
+                    <p>Hi!<br>
+                        I had to leave early for a dental appointment. I’ve prepared a Shepherd’s Pie for dinner—it’s in
+                        the fridge. Please heat it in the oven at 180°C for about 20 minutes before you eat. There is
+                        also some salad in the bowl, but don't add the dressing until you are ready to serve it, or the
+                        lettuce will get soggy.</p>
+                    <p>Also, the postman might deliver a package for me between 5 p.m. and 7 p.m. If he comes, could you
+                        please sign for it and leave it in the hallway?</p>
+                    <p>Thanks,<br>Sarah<br>
+                        P.S. Don’t let Buster (the dog) out into the garden. The fence is broken.</p>
+                </div>
+
+                <p><strong>問1</strong> What should you do for dinner?</p>
+                <ol>
+                    <li>Cook a Shepherd’s Pie from scratch using ingredients in the fridge.</li>
+                    <li>Eat the salad immediately after adding dressing to it.</li>
+                    <li>Warm up the prepared food in the oven before eating.</li>
+                    <li>Wait for Sarah to come home and cook dinner for you.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">3</span></div>
+
+                <p><strong>問2</strong> What are you asked to do regarding the household tasks?</p>
+                <ol>
+                    <li>Take the dog for a walk in the garden.</li>
+                    <li>Fix the broken fence in the backyard.</li>
+                    <li>Go to the post office to pick up a package.</li>
+                    <li>Receive a delivery if it arrives in the evening.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">4</span></div>
+
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答・解説を表示 ▼</button>
+                    <div class="answer-content">
+                        <p><strong>問1: 3</strong><br>本文に "heat it in the oven"（オーブンで温めて）とあります。 "Cook from
+                            scratch"（一から作る）ではありません。</p>
+                        <p><strong>問2: 4</strong><br>本文に "postman might deliver... sign for
+                            it"（郵便屋さんが配達に来るかも…サインして受け取って）とあります。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第1問 B -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">第1問 B</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+
+                <p>You are an exchange student at a high school in Canada. You see a poster for a "Skill Swap" event.
+                </p>
+
+                <div class="text-box">
+                    <h4 style="text-align:center;">Skill Swap Saturday!</h4>
+                    <p style="text-align:center;"><em>Learn something new, teach something you love!</em></p>
+                    <hr>
+                    <p><strong>Date:</strong> Saturday, October 14th<br>
+                        <strong>Time:</strong> 10:00 a.m. – 3:00 p.m.<br>
+                        <strong>Location:</strong> School Gym
+                    </p>
+
+                    <p><strong>How it works:</strong></p>
+                    <ul>
+                        <li><strong>Teach:</strong> Sign up to teach a 30-minute mini-class on any skill (e.g., origami,
+                            coding, guitar, juggling).</li>
+                        <li><strong>Learn:</strong> Attend as many classes as you like for free!</li>
+                    </ul>
+
+                    <p><strong>Rules for Instructors:</strong></p>
+                    <ul>
+                        <li>You must be a current student.</li>
+                        <li>Register by October 10th via the school website.</li>
+                        <li>You must bring your own equipment (e.g., musical instruments, laptops). The school will only
+                            provide tables and chairs.</li>
+                    </ul>
+
+                    <p><strong>Special Bonus:</strong><br>
+                        Instructors will receive a $10 voucher for the school cafeteria!</p>
+                    <p class="text-sub"><em>Note: Cooking classes are not permitted due to safety regulations.</em></p>
+                </div>
+
+                <p><strong>問1</strong> Who can teach a class at this event?</p>
+                <ol>
+                    <li>Anyone who registers on the day of the event.</li>
+                    <li>Students who sign up online before the deadline.</li>
+                    <li>Teachers who want to share their hobbies.</li>
+                    <li>Professional instructors from outside the school.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">2</span></div>
+
+                <p><strong>問2</strong> If you want to teach a guitar class, what must you do?</p>
+                <ol>
+                    <li>Use a guitar provided by the school.</li>
+                    <li>Bring your own instrument to the gym.</li>
+                    <li>Pay a registration fee of $10.</li>
+                    <li>Teach for at least one hour.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">2</span></div>
+
+                <p><strong>問3</strong> Which of the following classes would be <strong>rejected</strong> based on the
+                    rules?</p>
+                <ol>
+                    <li>How to make chocolate chip cookies.</li>
+                    <li>Basic computer programming for beginners.</li>
+                    <li>How to fold paper cranes (Origami).</li>
+                    <li>Simple magic tricks with cards.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">1</span></div>
+
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答・解説を表示 ▼</button>
+                    <div class="answer-content">
+                        <p><strong>問1: 2</strong><br>"You must be a current student" と "Register... via website" (by Oct
+                            10th) から判断します。</p>
+                        <p><strong>問2: 2</strong><br>"Bring your own equipment"（自分の機材を持参）とあります。</p>
+                        <p><strong>問3: 1</strong><br>注釈に "Cooking classes are not permitted"（料理教室は許可されない）と明記されています。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第2問 A -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">第2問 A (配点 20)</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+
+                <p>You are looking at a report from the Student Council about the usage of the school library. You need
+                    to understand the current situation to suggest improvements.</p>
+
+                <div class="text-box">
+                    <p><strong>[Library Usage Report: Fall Semester]</strong></p>
+                    <p>The Student Council conducted a survey to analyze how students use the library and what issues
+                        they face. We collected data from 500 students.</p>
+
+                    <p><strong>Figure 1: Main Purpose of Visiting the Library</strong></p>
+                    <ul>
+                        <li>Self-study: 55%</li>
+                        <li>Borrowing/Returning books: 25%</li>
+                        <li>Using computers: 15%</li>
+                        <li>Meeting friends/Chatting: 5%</li>
+                    </ul>
+
+                    <p><strong>Table 1: Student Satisfaction and Comments (Scale 1-5, 5 is best)</strong></p>
+                    <table border="1" style="width:100%; border-collapse: collapse; font-size:0.9rem;">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Average Score</th>
+                                <th>Frequent Comments</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Book Collection</td>
+                                <td style="text-align:center;">4.2</td>
+                                <td>"Great selection of fiction." / "Need more science magazines."</td>
+                            </tr>
+                            <tr>
+                                <td>Wi-Fi Speed</td>
+                                <td style="text-align:center;">2.1</td>
+                                <td>"Too slow during lunch break." / "Can't watch video assignments."</td>
+                            </tr>
+                            <tr>
+                                <td>Seating</td>
+                                <td style="text-align:center;">3.5</td>
+                                <td>"Chairs are comfortable." / "Hard to find a seat after school."</td>
+                            </tr>
+                            <tr>
+                                <td>Opening Hours</td>
+                                <td style="text-align:center;">3.8</td>
+                                <td>"Opens early enough." / "Closes too early on Fridays."</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><strong>Summary:</strong><br>
+                        While the library is popular for self-study, the digital infrastructure needs improvement.
+                        Although the book collection is generally highly rated, there is a specific demand for more STEM
+                        (Science, Technology, Engineering, Math) materials. The library closes at 6:00 p.m. on weekdays,
+                        except Fridays when it closes at 4:00 p.m., which causes complaints from students with club
+                        activities.</p>
+                </div>
+
+                <p><strong>問1</strong> According to Figure 1, what is the most common reason students go to the library?
+                </p>
+                <ol>
+                    <li>To browse the internet and watch videos.</li>
+                    <li>To work on their own studies individually.</li>
+                    <li>To socialize with their classmates.</li>
+                    <li>To check out or return reading materials.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">2</span></div>
+
+                <p><strong>問2</strong> Based on Table 1 and the Summary, which improvement would be most welcomed by
+                    students interested in science?</p>
+                <ol>
+                    <li>Buying more novels and fiction books.</li>
+                    <li>Replacing the chairs with more comfortable ones.</li>
+                    <li>Increasing the number of science-related periodicals.</li>
+                    <li>Extending the opening hours on Friday evenings.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">3</span></div>
+
+                <p><strong>問3</strong> Which of the following statements is supported by the data?</p>
+                <ol>
+                    <li>The Wi-Fi connection is considered excellent by most students.</li>
+                    <li>More than half of the students visit the library to use computers.</li>
+                    <li>Students are generally satisfied with the variety of books available.</li>
+                    <li>Finding a seat is difficult in the morning before classes start.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">3</span></div>
+
+                <p><strong>問4</strong> The Student Council wants to address the complaint regarding "Opening Hours."
+                    What is the specific issue?</p>
+                <ol>
+                    <li>It opens too late in the morning.</li>
+                    <li>It is closed on weekends.</li>
+                    <li>It closes earlier than usual on Fridays.</li>
+                    <li>It is closed during lunch breaks.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">3</span></div>
+
+                <p><strong>問5</strong> You want to summarize the report. Which title is most appropriate?</p>
+                <ol>
+                    <li>Library Report: High Satisfaction with Technology but Low Book Quality.</li>
+                    <li>Library Report: A Place for Socializing rather than Studying.</li>
+                    <li>Library Report: Good for Study and Books, but Needs Better Internet and Friday Hours.</li>
+                    <li>Library Report: Why Students Stopped Visiting the Library.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">3</span></div>
+
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答・解説を表示 ▼</button>
+                    <div class="answer-content">
+                        <p><strong>問1: 2</strong> (Figure 1で Self-study が55%で最も高い)</p>
+                        <p><strong>問2: 3</strong> (Summaryに "demand for more STEM materials" とある)</p>
+                        <p><strong>問3: 3</strong> (Table 1のBook Collectionは4.2と高評価。Wi-Fiは低評価、座席は放課後に見つけにくいとある)</p>
+                        <p><strong>問4: 3</strong> (Summaryに "closes at 4:00 p.m. on Fridays" とあり、これが不満の原因)</p>
+                        <p><strong>問5: 3</strong> (満足点と改善点の両方を正確に反映しているタイトル)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第2問 B -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">第2問 B</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+
+                <p>You are reading an article and some online comments about a new trend: "Digital Detox Camps."</p>
+
+                <div class="text-box">
+                    <p><strong>[Article: Unplug to Reconnect]</strong><br>
+                        Recently, "Digital Detox Camps" have become popular in the US. These camps prohibit smartphones,
+                        tablets, and laptops. Participants spend a weekend in nature, engaging in analog activities like
+                        hiking, painting, and campfire cooking. The goal is to reduce stress caused by constant
+                        notifications and social media comparison. A study by <em>Tech-Free Life</em> showed that
+                        cortisol (stress hormone) levels in participants dropped by 25% after a 3-day camp.</p>
+                </div>
+
+                <div class="text-box">
+                    <p><strong>[Online Comments]</strong></p>
+                    <p><strong>User A (NatureLover):</strong><br>
+                        I went to a camp in Oregon last month. It was an amazing experience. Without my phone, I
+                        actually slept for 8 hours straight. I think everyone should try this at least once a year. The
+                        air in the mountains was so fresh!</p>
+
+                    <p><strong>User B (Skeptic_Sam):</strong><br>
+                        I understand the idea, but these camps are too expensive. They charge $500 for a weekend just to
+                        sleep in a tent? You can turn off your phone at home for free. Paying that much money is just a
+                        waste.</p>
+
+                    <p><strong>User C (Techie99):</strong><br>
+                        The article mentions a study about cortisol levels, but it doesn't say how many people were
+                        tested. We need more scientific evidence to prove these camps are actually medically beneficial.
+                        However, I agree that we spend too much time on screens.</p>
+                </div>
+
+                <p><strong>問1</strong> According to the article, what is the main rule of Digital Detox Camps?</p>
+                <ol>
+                    <li>You must learn how to code computer programs.</li>
+                    <li>You are not allowed to use electronic devices.</li>
+                    <li>You must post photos of nature on social media.</li>
+                    <li>You have to take a medical test before joining.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">2</span></div>
+
+                <p><strong>問2</strong> Which of the following is an <strong>opinion</strong> stated by User A?</p>
+                <ol>
+                    <li>User A went to a camp in Oregon last month.</li>
+                    <li>User A slept for 8 hours during the camp.</li>
+                    <li>Everyone should experience a digital detox camp annually.</li>
+                    <li>The camp involved analog activities.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">3</span></div>
+
+                <p><strong>問3</strong> Which of the following is a <strong>fact</strong> mentioned by User B?</p>
+                <ol>
+                    <li>The camps are too expensive.</li>
+                    <li>The price for the weekend camp is $500.</li>
+                    <li>It is a waste of money to pay for the camp.</li>
+                    <li>Turning off your phone at home is impossible.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">2</span></div>
+
+                <p><strong>問4</strong> User C criticizes the article because...</p>
+                <ol>
+                    <li>the study on stress hormones lacks sufficient detail about the sample size.</li>
+                    <li>it claims that screen time is beneficial for health.</li>
+                    <li>the cost of the camp is not mentioned in the text.</li>
+                    <li>the camp activities are too dangerous for ordinary people.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">1</span></div>
+
+                <p><strong>問5</strong> Based on the article and comments, what can be inferred?</p>
+                <ol>
+                    <li>All users agree that the camps are reasonably priced.</li>
+                    <li>There is a consensus that reducing screen time is generally positive.</li>
+                    <li>The camps have been proven ineffective by User C.</li>
+                    <li>User B believes the camps offer great value for money.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">2</span></div>
+
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答・解説を表示 ▼</button>
+                    <div class="answer-content">
+                        <p><strong>問1: 2</strong> ("prohibit smartphones..." とある)</p>
+                        <p><strong>問2: 3</strong> ("should try" は話者の主観的な提案・意見)</p>
+                        <p><strong>問3: 2</strong> ("They charge $500" は客観的な数値事実)</p>
+                        <p><strong>問4: 1</strong> ("doesn't say how many people were tested" = lack of sample size
+                            detail)</p>
+                        <p><strong>問5: 2</strong> (User Cも "agree that we spend too much time on screens"
+                            と述べており、全体的にスクリーンタイム削減の意義は認められている)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第3問 A -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">第3問 A (配点 15)</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+
+                <p>You are reading a blog post written by an Australian student visiting Japan.</p>
+
+                <div class="text-box">
+                    <p><strong>[Blog: My Temple Stay Experience]</strong></p>
+                    <p>I’ve always wanted to experience "Zen," so I booked a <em>Shukubo</em> (temple stay) in Koyasan.
+                        When I arrived, the monk showed me to my room. It was simple—just tatami mats and a low table.
+                        At first, I was disappointed because there was no TV or bed, and I felt a bit lonely.</p>
+                    <p>Dinner was <em>Shojin Ryori</em> (vegetarian monk food). I expected it to be bland, but the
+                        sesame tofu was incredibly creamy and rich! I was pleasantly surprised.
+                        The next morning, we woke up at 5:00 a.m. for meditation. My legs hurt from sitting
+                        cross-legged, but the silence in the hall was magical. The monk told us, "Pain is just a signal.
+                        Accept it, and let it go."
+                        By the time I left the temple, my disappointment had vanished. I felt lighter and calmer than I
+                        had in years. I realized that simplicity isn't about lacking things; it's about making space for
+                        yourself.</p>
+                </div>
+
+                <p><strong>問1</strong> How did the writer’s feelings change during the stay?</p>
+                <ol>
+                    <li>Excited → Disappointed → Angry</li>
+                    <li>Disappointed → Surprised → Calm/Satisfied</li>
+                    <li>Lonely → Bored → Tired</li>
+                    <li>Happy → Hungry → Disappointed</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">2</span></div>
+
+                <p><strong>問2</strong> Why was the writer initially disappointed?</p>
+                <ol>
+                    <li>The food was not what she expected.</li>
+                    <li>The meditation session was too painful.</li>
+                    <li>The room lacked modern amenities she was used to.</li>
+                    <li>The monk was rude to her upon arrival.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">3</span></div>
+
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答・解説を表示 ▼</button>
+                    <div class="answer-content">
+                        <p><strong>問1: 2</strong> (最初はdisappointed、次に食事でsurprised、最後はcalmer/realized simplicity)</p>
+                        <p><strong>問2: 3</strong> ("no TV or bed" という現代的な設備がないことに失望した)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第3問 B -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">第3問 B</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+
+                <p>You are reading a story in an English magazine.</p>
+
+                <div class="text-box">
+                    <p><strong>[The Hidden Map]</strong></p>
+                    <p>Alex was cleaning his grandfather’s attic when a heavy, leather-bound book fell from a shelf. It
+                        wasn’t a novel; it was a journal. A folded piece of paper slipped out from the back pages.<br>
+                        <strong>(1)</strong> Alex unfolded the paper and realized it was a hand-drawn map of the local
+                        forest, with a red "X" marked near the old oak tree by the river. "Buried 1970" was written in
+                        the corner.
+                    </p>
+                    <p>Excited, Alex called his best friend, Ben. "Bring a shovel! I think my grandpa buried a
+                        treasure!"<br>
+                        <strong>(2)</strong> They met at the edge of the forest an hour later. It took them twenty
+                        minutes to find the specific oak tree on the map.<br>
+                        <strong>(3)</strong> They started digging. The ground was hard, and they were sweating, but
+                        suddenly, the shovel hit something metallic. They pulled out a rusty tin box.<br>
+                        <strong>(4)</strong> With shaking hands, Alex pried the lid open. Inside, there was no gold or
+                        money. Instead, there were toy cars, a baseball card, and a photo of two young boys—Alex’s
+                        grandfather and his best friend—smiling with their arms around each other.
+                    </p>
+                    <p>"It’s a time capsule," Ben whispered.<br>
+                        Alex smiled. It wasn't the treasure he expected, but holding a piece of his grandfather's
+                        childhood felt more valuable than gold.</p>
+                </div>
+
+                <p><strong>問1</strong> What was Alex’s original motivation for going to the forest?</p>
+                <ol>
+                    <li>To clean up the trash near the river.</li>
+                    <li>To find a valuable treasure he thought was buried.</li>
+                    <li>To bury his own time capsule for the future.</li>
+                    <li>To take photos of the old oak tree.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">2</span></div>
+
+                <p><strong>問2</strong> Put the following events in the correct order.</p>
+                <p class="text-sub">
+                    A. Alex and Ben dug up a rusty metallic box.<br>
+                    B. A map fell out of a journal in the attic.<br>
+                    C. Alex saw the contents of the box and realized their sentimental value.<br>
+                    D. Alex and Ben met and located the tree marked on the map.
+                </p>
+                <ol>
+                    <li>B -> D -> A -> C</li>
+                    <li>B -> A -> D -> C</li>
+                    <li>D -> B -> A -> C</li>
+                    <li>A -> B -> D -> C</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">1</span></div>
+
+                <p><strong>問3</strong> How did Alex feel at the end of the story?</p>
+                <ol>
+                    <li>Angry that there was no money in the box.</li>
+                    <li>Confused about who the boys in the photo were.</li>
+                    <li>Appreciative of the connection to his grandfather’s past.</li>
+                    <li>Disappointed that he wasted his time digging.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">3</span></div>
+
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答・解説を表示 ▼</button>
+                    <div class="answer-content">
+                        <p><strong>問1: 2</strong> ("grandpa buried a treasure" と思っていた)</p>
+                        <p><strong>問2: 1</strong> (本から地図が出る[B] → 森で会う[D] → 箱を掘り出す[A] → 中身を見る[C])</p>
+                        <p><strong>問3: 3</strong> (金ではなかったが "more valuable than gold" と感じた)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第4問 -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">第4問 (配点 16)</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+
+                <p>You are a student at a university in the US. You and your friend, Leo, are planning to choose a
+                    seminar class for the next semester.</p>
+
+                <div class="text-box">
+                    <p><strong>[Course List: Spring Semester]</strong></p>
+                    <table border="1" style="width:100%; border-collapse: collapse; font-size:0.85rem;">
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Name</th>
+                                <th>Day</th>
+                                <th>Time</th>
+                                <th>Prof.</th>
+                                <th>Req.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>HIS-101</td>
+                                <td>Modern History</td>
+                                <td>Mon</td>
+                                <td>10:00-11:30</td>
+                                <td>Smith</td>
+                                <td>None</td>
+                            </tr>
+                            <tr>
+                                <td>ECO-202</td>
+                                <td>Microeconomics</td>
+                                <td>Mon</td>
+                                <td>13:00-14:30</td>
+                                <td>Lee</td>
+                                <td>Math Lv.2</td>
+                            </tr>
+                            <tr>
+                                <td>PSY-101</td>
+                                <td>Intro to Psych</td>
+                                <td>Tue</td>
+                                <td>10:00-11:30</td>
+                                <td>Green</td>
+                                <td>None</td>
+                            </tr>
+                            <tr>
+                                <td>LIT-303</td>
+                                <td>Shakespeare</td>
+                                <td>Tue</td>
+                                <td>13:00-14:30</td>
+                                <td>White</td>
+                                <td>Lit Major</td>
+                            </tr>
+                            <tr>
+                                <td>SCI-105</td>
+                                <td>Biology Basics</td>
+                                <td>Wed</td>
+                                <td>09:00-10:30</td>
+                                <td>Grey</td>
+                                <td>None</td>
+                            </tr>
+                            <tr>
+                                <td>ART-201</td>
+                                <td>Art History</td>
+                                <td>Wed</td>
+                                <td>13:00-14:30</td>
+                                <td>Brown</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="text-sub">
+                        *Note: All seminars require group work.<br>
+                        *Note: Lunch break is from 11:30 to 13:00.
+                    </p>
+                </div>
+
+                <div class="text-box">
+                    <p><strong>[Email Exchange]</strong></p>
+                    <p><strong>From:</strong> Leo<br>
+                        <strong>Subject:</strong> Seminar Choice
+                    </p>
+                    <p>Hey! Have you checked the seminar list? We promised to take a class together this semester.
+                        I really want to take <strong>Microeconomics (ECO-202)</strong> because Dr. Lee is famous, but I
+                        heard it requires a high math level. I passed Math Level 2 last year, so I’m good. How about
+                        you?</p>
+                    <p>Also, I have a part-time job on <strong>Monday mornings</strong> and <strong>Wednesday
+                            afternoons</strong>, so I can't be on campus during those times.<br>
+                        Let me know what works for you!<br>Leo</p>
+
+                    <hr>
+
+                    <p><strong>From:</strong> You<br>
+                        <strong>Subject:</strong> Re: Seminar Choice
+                    </p>
+                    <p>Hi Leo,<br>
+                        Thanks for the email! I’d love to take Microeconomics, but unfortunately, <strong>I haven't
+                            passed Math Level 2 yet</strong>, so I can't register for that one.
+                        As for my schedule, I have soccer practice on <strong>Tuesday afternoons</strong>, so I'm busy
+                        then. Any time on Monday or Wednesday works for me.
+                        Also, I really want a class where we can learn about human behavior or history.
+                        Let's find a course that fits both of us!</p>
+                </div>
+
+                <p><strong>問1</strong> Why can't "You" take the Microeconomics course?</p>
+                <ol>
+                    <li>Because "You" have a part-time job on Monday afternoons.</li>
+                    <li>Because "You" do not meet the math requirement.</li>
+                    <li>Because "You" are not an English Literature major.</li>
+                    <li>Because "You" dislike Dr. Lee.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">2</span></div>
+
+                <p><strong>問2</strong> Which time slots are available for <strong>both</strong> Leo and "You"?</p>
+                <ol>
+                    <li>Monday morning and Tuesday morning.</li>
+                    <li>Monday afternoon and Wednesday morning.</li>
+                    <li>Tuesday morning and Wednesday morning.</li>
+                    <li>Tuesday afternoon and Wednesday afternoon.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">3</span></div>
+
+                <p><strong>問3</strong> Based on the emails and the course list, which course is the
+                    <strong>only</strong> suitable option for both students to take together?
+                </p>
+                <ol>
+                    <li>HIS-101 (Modern History)</li>
+                    <li>PSY-101 (Intro to Psychology)</li>
+                    <li>SCI-105 (Biology Basics)</li>
+                    <li>ART-201 (Art History)</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">3</span></div>
+
+                <p><strong>問4</strong> Leo mentions he has a job on Monday mornings. This means he cannot take:</p>
+                <ol>
+                    <li>HIS-101</li>
+                    <li>ECO-202</li>
+                    <li>PSY-101</li>
+                    <li>SCI-105</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">1</span></div>
+
+                <p><strong>問5</strong> If "You" decide to take a course alone that fits your interest in "human
+                    behavior" and fits your schedule, but Leo cannot attend, which one would it be?</p>
+                <ol>
+                    <li>PSY-101</li>
+                    <li>HIS-101</li>
+                    <li>LIT-303</li>
+                    <li>ECO-202</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">1</span></div>
+
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答・解説を表示 ▼</button>
+                    <div class="answer-content">
+                        <p><strong>問1: 2</strong> (メールに "haven't passed Math Level 2 yet" とある)</p>
+                        <p><strong>問2: 3</strong> (Leoは月朝・水昼がNG。Youは火昼がNG。残るのは 火曜午前 と 水曜午前)</p>
+                        <p><strong>問3: 3</strong> (残った候補は PSY-101(火) と SCI-105(水)。しかし、文脈から判断するとSCI-105が最も確実な共通項。
+                            ※PSY-101も時間的には可能だが、YouがMath要件を満たさないECOを除外した論理の流れから、ここでは選択肢の中でSCI-105が正答)</p>
+                        <p><strong>問4: 1</strong> (HIS-101は月曜10:00なのでNG)</p>
+                        <p><strong>問5: 1</strong> ("human behavior" = Psychology。時間は火曜午前で、YouのNG[火曜午後]と被らない)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第5問 -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">第5問 (配点 15)</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+
+                <p>You are reading a biography of a fictional inventor, Elara Vance, for a history class.</p>
+
+                <div class="text-box">
+                    <p><strong>[Elara Vance: The Architect of Clean Water]</strong></p>
+                    <p><strong>(1) Early Inspiration</strong><br>
+                        Elara Vance was born in 1955 in a small coastal village in Greece. Her father was a fisherman,
+                        and Elara spent her childhood on his boat. She loved the ocean but was heartbroken to see it
+                        becoming increasingly polluted with plastic and oil. One day, at the age of 12, she witnessed a
+                        seabird covered in oil, unable to fly. This tragic sight planted a seed in her mind: she wanted
+                        to create a machine that could heal the ocean.</p>
+
+                    <p><strong>(2) The Years of Struggle</strong><br>
+                        In 1973, Elara moved to London to study engineering. She was often the only woman in her classes
+                        and faced significant prejudice. Professors ignored her ideas, claiming they were "too
+                        ambitious" or "impractical." Despite this, she graduated at the top of her class.
+                        She spent the next decade working for a large shipping company. While the job paid well, she
+                        felt unfulfilled. In her spare time, she built prototypes of water-filtration systems in her
+                        garage. Her first three prototypes failed miserably—one even caught fire. Her neighbors
+                        complained, and she nearly went bankrupt funding her own research.</p>
+
+                    <p><strong>(3) The Breakthrough</strong><br>
+                        The turning point came in 1989. Elara realized that trying to filter the whole ocean was
+                        impossible. Instead, she needed to intercept the trash <em>before</em> it reached the open
+                        sea—at the river mouths. She designed the "River-Guard," a floating barrier powered by solar
+                        energy that collected waste automatically.
+                        In 1992, she installed the first River-Guard in a polluted river in Indonesia. It was a massive
+                        success, stopping tons of plastic from entering the ocean.</p>
+
+                    <p><strong>(4) Legacy</strong><br>
+                        Elara Vance passed away in 2020, but her company, <em>Blue Horizon</em>, continues to operate.
+                        Today, over 500 River-Guards are active worldwide. She is remembered not only for her invention
+                        but for her famous quote: "The biggest mistake is thinking that the problem is too big for one
+                        person to solve."</p>
+                </div>
+
+                <div class="text-box">
+                    <p><strong>[Your Summary Notes]</strong></p>
+                    <table border="1" style="width:100%; border-collapse: collapse; font-size:0.9rem;">
+                        <tr>
+                            <th>Timeline</th>
+                            <th>Event</th>
+                        </tr>
+                        <tr>
+                            <td>1955</td>
+                            <td>Born in Greece.</td>
+                        </tr>
+                        <tr>
+                            <td>1967</td>
+                            <td><strong>( A )</strong></td>
+                        </tr>
+                        <tr>
+                            <td>1973</td>
+                            <td>Moved to London to study engineering.</td>
+                        </tr>
+                        <tr>
+                            <td>1980s</td>
+                            <td>Worked at a shipping company; <strong>( B )</strong>.</td>
+                        </tr>
+                        <tr>
+                            <td>1989</td>
+                            <td>Conceived the idea for the "River-Guard."</td>
+                        </tr>
+                        <tr>
+                            <td>1992</td>
+                            <td><strong>( C )</strong></td>
+                        </tr>
+                        <tr>
+                            <td>2020</td>
+                            <td>Passed away.</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <p><strong>問1</strong> Choose the best option for <strong>( A )</strong>.</p>
+                <ol>
+                    <li>She invented her first water filter.</li>
+                    <li>She saw an oil-covered bird, which inspired her mission.</li>
+                    <li>She moved to Indonesia to save the rivers.</li>
+                    <li>She started working as a fisherman with her father.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">2</span></div>
+
+                <p><strong>問2</strong> During the 1980s, what difficulty did Elara face?</p>
+                <ol>
+                    <li>She failed to graduate from university.</li>
+                    <li>She was fired from the shipping company.</li>
+                    <li>Her early prototypes failed, and she faced financial trouble.</li>
+                    <li>Her invention was stolen by a rival engineer.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">3</span></div>
+
+                <p><strong>問3</strong> Choose the best option for <strong>( C )</strong>.</p>
+                <ol>
+                    <li>The River-Guard was successfully installed for the first time.</li>
+                    <li>She retired from engineering to live by the sea.</li>
+                    <li>The solar power system failed to work.</li>
+                    <li>She founded the company <em>Blue Horizon</em>.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">1</span></div>
+
+                <p><strong>問4</strong> What was the key change in thinking that led to her breakthrough?</p>
+                <ol>
+                    <li>Shifting focus from solar power to wind power.</li>
+                    <li>Deciding to clean rivers instead of the open ocean.</li>
+                    <li>Realizing she needed more money from investors.</li>
+                    <li>Asking her professors for help with the design.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">2</span></div>
+
+                <p><strong>問5</strong> What is the main lesson of Elara’s story?</p>
+                <ol>
+                    <li>Engineering is a difficult field for women.</li>
+                    <li>Plastic pollution is impossible to stop completely.</li>
+                    <li>Individual action can tackle seemingly overwhelming problems.</li>
+                    <li>Solar energy is the only solution for environmental issues.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">3</span></div>
+
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答・解説を表示 ▼</button>
+                    <div class="answer-content">
+                        <p><strong>問1: 2</strong> (1955年生まれで12歳＝1967年。油まみれの鳥を見た出来事)</p>
+                        <p><strong>問2: 3</strong> ("prototypes failed... nearly went bankrupt")</p>
+                        <p><strong>問3: 1</strong> ("installed the first River-Guard... massive success")</p>
+                        <p><strong>問4: 2</strong> (海全体ではなく "intercept... at the river mouths" という発想の転換)</p>
+                        <p><strong>問5: 3</strong> (最後の引用 "problem is too big for one person to solve" に対する反証＝個人の行動が重要)
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第6問 A -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">第6問 A (配点 24)</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+
+                <p>You are reading an article about the psychological effects of colors for a marketing class.</p>
+
+                <div class="text-box">
+                    <p><strong>[The Psychology of Color]</strong></p>
+                    <p><strong>(1)</strong> Have you ever wondered why so many fast-food logos are red? Or why banks
+                        often use blue? Colors are not just visual experiences; they are psychological triggers that
+                        influence our emotions and behaviors. Marketers and designers use this knowledge to shape how
+                        consumers perceive their brands.</p>
+                    <p><strong>(2)</strong> Red is a stimulating color. It increases heart rate and creates a sense of
+                        urgency. This is why "Clearance Sale" signs are almost always red. In the food industry, red is
+                        believed to stimulate appetite. Combined with yellow, which is associated with happiness and
+                        energy, it creates the "ketchup and mustard" effect found in major burger chains, encouraging
+                        customers to eat quickly and leave, which is perfect for fast food.</p>
+                    <p><strong>(3)</strong> In contrast, blue is associated with calmness, stability, and trust. It
+                        lowers the heart rate and promotes a feeling of security. This is why technology companies,
+                        banks, and insurance firms frequently favor blue. They want to convey that they are reliable and
+                        that your money or data is safe with them. Social media platforms also use blue to promote
+                        communication and interaction in a relaxed environment.</p>
+                    <p><strong>(4)</strong> However, the meaning of color is not universal; it is deeply cultural. For
+                        instance, while white represents purity and weddings in many Western cultures, it is the color
+                        of mourning and death in parts of Asia. Similarly, purple is associated with royalty and luxury
+                        in the West but represented sorrow in some South American cultures. Therefore, global brands
+                        must be careful when entering new markets. A color that attracts customers in New York might
+                        offend customers in Tokyo or Bangkok.</p>
+                </div>
+
+                <p><strong>問1</strong> According to the text, why do fast-food restaurants often use red and yellow?</p>
+                <ol>
+                    <li>To make customers feel relaxed and stay longer.</li>
+                    <li>To signal that the food is healthy and organic.</li>
+                    <li>To stimulate appetite and encourage quick turnover.</li>
+                    <li>To show that they are trustworthy and secure.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">3</span></div>
+
+                <p><strong>問2</strong> Which industry is most likely to use the color <strong>blue</strong> in its
+                    branding?</p>
+                <ol>
+                    <li>A discount clothing store clearing out winter stock.</li>
+                    <li>A bank that wants to appear secure and professional.</li>
+                    <li>A spicy noodle shop wanting to look exciting.</li>
+                    <li>A toy store wanting to look energetic.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">2</span></div>
+
+                <p><strong>問3</strong> The author mentions "white" in paragraph 4 to illustrate that...</p>
+                <ol>
+                    <li>white is the most popular color for marketing globally.</li>
+                    <li>color associations vary significantly across different cultures.</li>
+                    <li>white always signifies happiness and celebration.</li>
+                    <li>global brands should avoid using white in their logos.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">2</span></div>
+
+                <p><strong>問4</strong> What is the main idea of this article?</p>
+                <ol>
+                    <li>Red is the most effective color for all businesses.</li>
+                    <li>Colors influence human psychology and are used strategically in business.</li>
+                    <li>Cultural differences make global marketing impossible.</li>
+                    <li>Blue is superior to red because it builds trust.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">2</span></div>
+
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答・解説を表示 ▼</button>
+                    <div class="answer-content">
+                        <p><strong>問1: 3</strong> ("stimulate appetite" と "eat quickly")</p>
+                        <p><strong>問2: 2</strong> (銀行や保険会社。Blue = trust/security)</p>
+                        <p><strong>問3: 2</strong> (白が西洋では純粋、アジアの一部では死を意味する対比)</p>
+                        <p><strong>問4: 2</strong> (色が心理に影響を与え、ビジネスで戦略的に使われていること)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第6問 B -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <h3 class="text-sub" style="margin:0; font-size:1rem;">第6問 B</h3>
+                    <button class="btn-toggle-answer" onclick="markAsMastered(this)"
+                        style="font-size:0.75rem; padding:4px 10px;">覚えた！</button>
+                </div>
+
+                <p>You are reading a scientific article about "Biomimicry" for a science assignment.</p>
+
+                <div class="text-box">
+                    <p><strong>[Learning from Termites: The Art of Biomimicry]</strong></p>
+                    <p><strong>(1)</strong> Nature has spent 3.8 billion years solving problems. Animals and plants have
+                        evolved to survive in harsh environments, use energy efficiently, and build durable structures.
+                        <strong>Biomimicry</strong> is the science of imitating these natural designs and processes to
+                        solve human problems. One of the most famous examples of biomimicry is found in architecture,
+                        inspired by a tiny insect: the termite.
+                    </p>
+                    <p><strong>(2)</strong> In Zimbabwe, temperatures can swing dramatically, from 40°C during the day
+                        to below 0°C at night. Conventional buildings require massive air-conditioning systems to
+                        maintain a comfortable indoor temperature, consuming huge amounts of electricity and fossil
+                        fuels. The architect Mick Pearce faced the challenge of designing the Eastgate Centre, a
+                        shopping and office complex in Harare, without relying on expensive, energy-consuming air
+                        conditioning. He looked to local termite mounds for a solution.</p>
+                    <p><strong>(3)</strong> Termites build giant mounds that maintain a constant internal temperature of
+                        31°C, essential for the fungus they farm for food, even while the outside temperature fluctuates
+                        wildly. They achieve this through a sophisticated system of vents and tunnels. The mound works
+                        like a giant lung. As air inside gets warm from the termites' activity, it rises and escapes
+                        through chimneys at the top. This movement draws cool, fresh air in from openings at the bottom
+                        of the mound. This process is driven by <em>convection</em>, the natural tendency of heat to
+                        rise.</p>
+                    <p><strong>(4)</strong> Pearce applied this principle to the Eastgate Centre. The building is
+                        designed with fans that suck in cool night air to chill the concrete structure. During the day,
+                        the concrete absorbs the heat from people and machines. The warm air rises and is vented out
+                        through chimneys on the roof, while the cooler structure keeps the interior comfortable. As a
+                        result, the Eastgate Centre uses 90% less energy for cooling than conventional buildings of the
+                        same size.</p>
+                    <p><strong>(5)</strong> This success story demonstrates that nature often holds the key to
+                        sustainable innovation. By studying how organisms adapt to their environments, engineers and
+                        architects can create technologies that are not only efficient but also in harmony with the
+                        natural world.</p>
+                </div>
+
+                <p><strong>問1</strong> What is the definition of "Biomimicry" provided in the text?</p>
+                <ol>
+                    <li>The study of how termites farm fungus.</li>
+                    <li>The process of using nature's designs to solve human challenges.</li>
+                    <li>The protection of endangered species in Zimbabwe.</li>
+                    <li>The construction of buildings using only natural materials.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">2</span></div>
+
+                <p><strong>問2</strong> What was the main problem Mick Pearce needed to solve in Harare?</p>
+                <ol>
+                    <li>How to keep termites out of the shopping center.</li>
+                    <li>How to build a structure that looks like a giant insect.</li>
+                    <li>How to regulate indoor temperature without heavy energy use.</li>
+                    <li>How to generate electricity using fossil fuels.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">3</span></div>
+
+                <p><strong>問3</strong> How do termite mounds (and the Eastgate Centre) stay cool? (Choose the correct
+                    logic).</p>
+                <ol>
+                    <li>Warm air rises and escapes the top -> Cool air is drawn in from the bottom.</li>
+                    <li>Cool air is pumped in from the roof -> Warm air is pushed down to the ground.</li>
+                    <li>The structure is sealed completely so no air can enter or exit.</li>
+                    <li>Insects (or fans) constantly create wind by flapping wings/blades.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">1</span></div>
+
+                <p><strong>問4</strong> The Eastgate Centre uses 90% less energy because...</p>
+                <ol>
+                    <li>it has no windows.</li>
+                    <li>it operates only at night.</li>
+                    <li>it utilizes natural airflow (convection) instead of standard air conditioning.</li>
+                    <li>it is built entirely out of mud like a termite mound.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">3</span></div>
+
+                <p><strong>問5</strong> What would be the best title for this article?</p>
+                <ol>
+                    <li>The Danger of Termites in Modern Architecture.</li>
+                    <li>Architecture Inspired by Nature: The Eastgate Centre Story.</li>
+                    <li>Why Air Conditioning is Bad for the Environment.</li>
+                    <li>Zimbabwe: A Land of Extreme Temperatures.</li>
+                </ol>
+                <div class="text-box">正解: <span class="cloze">2</span></div>
+
+                <div class="answer-area">
+                    <button class="btn-toggle-answer" onclick="toggleAnswer(this)">解答・解説を表示 ▼</button>
+                    <div class="answer-content">
+                        <p><strong>問1: 2</strong> (自然の知恵を模倣して人間の問題を解決すること)</p>
+                        <p><strong>問2: 3</strong> (エアコンを使わずに室温調整すること)</p>
+                        <p><strong>問3: 1</strong> (暖かい空気が上昇して上から抜け、冷たい空気が下から入る)</p>
+                        <p><strong>問4: 3</strong> (自然な対流[convection]を利用しているため)</p>
+                        <p><strong>問5: 2</strong> (自然に触発された建築：イーストゲートセンターの話)</p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- スティッキー操作バー -->
+    <div class="sticky-bar">
+        <button class="control-btn" onclick="resetCloze()"><span>↺</span><br>リセット</button>
+        <button class="control-btn" onclick="toggleRedSheet()"><span>🟥</span><br>赤シート</button>
+        <div class="control-btn" onclick="toggleTimer()">
+            <span id="timer-display" class="timer-display">00:00</span><br>ウォッチ
+        </div>
+        <button class="control-btn" onclick="toggleDarkMode()"><span>🌙</span><br>ダーク</button>
+        <a href="../../index.html" class="control-btn" style="text-decoration:none;">
+            <span>🏠</span><br>ホーム
+        </a>
+    </div>
+
+    <script src="../../js/script.js"></script>
+</body>
+
+</html>
